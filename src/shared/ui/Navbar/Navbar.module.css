@@ -1,0 +1,150 @@
+.container {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.navbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar img {
+  width: 72px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 27px;
+}
+
+.navLinks a {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+}
+
+.navLinks a:hover {
+  color: #88b702;
+  transition: 0.1s ease;
+}
+
+.downloadCV {
+  background-color: #88b702;
+  padding: 20px 32px;
+  color: white;
+  border-radius: 80px;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.downloadCV:hover {
+  background-color: #6fa001;
+  transition: 0.1s ease;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 390px) {
+  .container {
+    width: 358px;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .navbar img {
+    width: 48px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .downloadCV {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+    background: none;
+    border: none;
+  }
+
+  .menuBtn img {
+    width: 45px;
+  }
+
+  .mobileMenu {
+    display: block;
+    background: #050605;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 24px 20px;
+
+    transform: translateY(-200%);
+    transition: 0.3s ease;
+    z-index: 99;
+  }
+
+  .mobileMenu.open {
+    transform: translateY(0);
+  }
+
+  .mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobileMenu a {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .mobileCV {
+    margin-top: 24px;
+    background-color: #88b702;
+    padding: 18px;
+    color: white;
+    border-radius: 80px;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+  }
+}
