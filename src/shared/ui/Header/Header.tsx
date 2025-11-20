@@ -1,15 +1,12 @@
 import style from "./Header.module.css";
+import type { HeaderProps } from "./types";
 
-export default function Header() {
+export default function Header({ title, description }: HeaderProps) {
   return (
     <div className={style.container}>
       <header className={style.header}>
-        <h1>A leading web-studio to take your business to the next level</h1>
-        <p>
-          We create modern, user-friendly websites optimized for all devices.
-          Our solutions suit any purpose — from personal projects to large-scale
-          platforms.
-        </p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </header>
     </div>
   );

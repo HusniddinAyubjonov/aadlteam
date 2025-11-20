@@ -28,3 +28,30 @@
   text-align: center;
   color: #ffffff;
 }
+
+@media (max-width: 390px) {
+  .container {
+    width: 358px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header h1 {
+    width: 100%;
+    font-size: 36px;
+    line-height: 46px;
+    text-align: start;
+  }
+
+  .header p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: start;
+    margin-top: 26px;
+  }
+}
