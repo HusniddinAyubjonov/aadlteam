@@ -3,26 +3,26 @@
   margin: 0 auto;
 }
 
-.advantages {
+.starts {
   margin-top: 215px;
   display: flex;
   justify-content: space-between;
 }
 
-.advantagesText {
+.startText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.advantagesText h1 {
+.startText h1 {
   font-weight: 700;
   font-style: Bold;
   font-size: 42px;
   line-height: 55.02px;
 }
 
-.advantagesText p {
+.startText p {
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
@@ -31,14 +31,14 @@
   margin-bottom: 20px;
 }
 
-.advantagesInfo {
+.startInfo {
   display: flex;
   align-items: center;
   margin-top: 16px;
   gap: 16px;
 }
 
-.advantagesInfo .icon {
+.startInfo .icon {
   background-color: #88b702;
   width: 46px;
   height: 46px;
@@ -53,7 +53,7 @@
   height: 30px;
 }
 
-.advantagesInfo h3 {
+.startInfo h3 {
   width: 420px;
   font-weight: 400;
   font-size: 18px;
@@ -66,37 +66,40 @@
     margin: 0 auto;
   }
 
-  .advantages {
+  .starts {
     margin-top: 80px;
     flex-direction: column;
   }
 
-  .advantagesText {
+  .startText {
     margin-top: 40px;
   }
 
-  .advantagesText h1 {
+  .startText h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  .advantagesText p {
+  .startText p {
     font-size: 16px;
     line-height: 26px;
     width: 330px;
     margin-top: 16px;
   }
 
-  .advantagesInfo {
+  .startInfo {
     display: flex;
     align-items: center;
     margin-top: 16px;
     gap: 16px;
   }
 
-  .advantagesInfo h3 {
+  .startInfo h3 {
     width: 222px;
     font-size: 16px;
     line-height: 26px;
+  }
+  .starts .video {
+    margin-top: 40px;
   }
 }

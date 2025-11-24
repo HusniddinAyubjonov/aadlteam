@@ -1,4 +1,4 @@
-import img1 from "../../assets/icon/ai-integration-icon.svg";
+import img1 from "../../assets/icon/avatar.svg";
 
 export const Reviews = [
   {

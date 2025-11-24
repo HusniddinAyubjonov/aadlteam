@@ -13,7 +13,7 @@ export default function Review() {
             <div className={style.card} key={index}>
               <p>{item.feedback}</p>
               <div className={style.user}>
-                <img src={item.avatar} alt={item.full_name} />
+                <img src={item.avatar} alt='avatar' />
                 <div className={style.user_info}>
                   <h3>{item.full_name}</h3>
                   <p>{item.role}</p>

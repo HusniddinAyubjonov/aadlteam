@@ -1,8 +1,10 @@
 import Advantages from "../components/Advantages/Advantages";
 import BuildFeature from "../components/BuildFeature/BuildFeature";
 import ChooseUs from "../components/ChooseUs/ChooseUs";
+import News from "../components/News/News";
 import Review from "../components/Reviews/Review";
 import Services from "../components/Services/Service";
+import StartWithMe from "../components/StartWith/StartWith";
 import Header from "../shared/ui/Header/Header";
 import Navbar from "../shared/ui/Navbar/Navbar";
 
@@ -18,7 +20,9 @@ export default function HomePage() {
       <Advantages />
       <ChooseUs />
       <BuildFeature />
-      <Review/>
+      <Review />
+      <StartWithMe />
+      <News />
     </div>
   );
 }

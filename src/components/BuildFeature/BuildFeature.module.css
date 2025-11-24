@@ -63,6 +63,7 @@
   .buildFeatureSection {
     height: 538px;
     overflow: hidden;
+    margin-top: 80px;
   }
 
   .buildFeature {
