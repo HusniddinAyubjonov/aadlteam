@@ -29,6 +29,118 @@
   letter-spacing: 0%;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.card {
+  width: 382px;
+  height: 590px;
+  border-radius: 40px;
+  background-color: #1e1e1e;
+}
+
+.card button {
+  width: 109px;
+  height: 36px;
+  border-radius: 1000px;
+  background-color: #88b702;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.7px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-left: 22px;
+  margin-top: -22px;
+}
+
+.card h3 {
+  margin-left: 22px;
+  margin-top: 40px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 22px;
+  line-height: 31px;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  margin-left: 22px;
+  margin-top: 32px;
+  margin-bottom: 38px;
+}
+
+.card hr {
+  width: 88%;
+  margin: 0 auto;
+  border: 1px solid #343534;
+}
+
+.user {
+  display: flex;
+  gap: 22px;
+  margin-left: 22px;
+  margin-top: 28px;
+}
+
+.user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user span {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  height: 40px;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.user span h4 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.user span h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.moreBtn {
+  width: 243px;
+  height: 70px;
+  border-radius: 80px;
+  color: #fff;
+  background-color: #1e1e1e;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 214px;
+  margin-left: 40%;
+}
+
 @media (max-width: 391px) {
   .container {
     width: 358px;
@@ -55,5 +167,21 @@
     margin-top: 16px;
     font-size: 16px;
     line-height: 26px;
+  }
+
+  .card {
+    width: 358px;
+    height: 580px;
+  }
+
+  .card p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .moreBtn {
+    width: 358px;
+    margin-left: 0;
+    margin-bottom: 60px;
   }
 }
