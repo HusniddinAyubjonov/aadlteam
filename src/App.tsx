@@ -4,6 +4,7 @@ import Navbar from "./shared/ui/Navbar/Navbar";
 import Services from "./components/Services/Service";
 import Advantages from "./components/Advantages/Advantages";
 import ChooseUs from "./components/ChooseUs/ChooseUs";
+import BuildFeature from "./components/BuildFeature/BuildFeature";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       />
       <Services />
       <Advantages />
-      <ChooseUs/>
+      <ChooseUs />
+      <BuildFeature />
     </>
   );
 }
