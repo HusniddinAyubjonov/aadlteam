@@ -1,6 +1,6 @@
-import img1 from '../../assets/icon/advantages-icon1.svg'
-import img2 from '../../assets/icon/advantages-icon2.svg'
-import img3 from '../../assets/icon/advantages-icon3.svg'
+import img1 from '../../../../assets/icon/advantages-icon1.svg'
+import img2 from '../../../../assets/icon/advantages-icon2.svg'
+import img3 from '../../../../assets/icon/advantages-icon3.svg'
 
 export const OurAdvantages = [
   {

@@ -1,5 +1,5 @@
 import style from "./BuildFeature.module.css";
-import img1 from "../../assets/imgs/build-feauture.png";
+import img1 from "../../../../assets/imgs/build-feauture.png";
 
 export default function BuildFeature() {
   return (

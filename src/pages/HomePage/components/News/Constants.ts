@@ -1,5 +1,5 @@
-import img1 from '../../assets/imgs/news-img.png'
-import avatar from '../../assets/icon/avatar.svg'
+import img1 from '../../../../assets/imgs/news-img.png'
+import avatar from '../../../../assets/icon/avatar.svg'
 
 export const New = [{
     img: img1,

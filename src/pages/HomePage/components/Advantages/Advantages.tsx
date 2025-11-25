@@ -1,5 +1,5 @@
 import style from "./Advantages.module.css";
-import img1 from "../../assets/imgs/our-advanture-img.png";
+import img1 from "../../../../assets/imgs/our-advanture-img.png";
 import { OurAdvantages } from "./constants";
 
 export default function Advantages() {

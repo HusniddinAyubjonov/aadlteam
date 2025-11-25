@@ -1,5 +1,5 @@
 import style from "./StartWith.module.css";
-import img1 from "../../assets/imgs/video.png";
+import img1 from "../../../../assets/imgs/video.png";
 import { StartWith } from "./constants";
 
 export default function StartWithMe() {

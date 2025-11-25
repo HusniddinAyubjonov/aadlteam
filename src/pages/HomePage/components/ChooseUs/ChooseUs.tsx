@@ -1,5 +1,5 @@
 import style from "./ChooseUs.module.css";
-import img1 from "../../assets/imgs/choose-us-img.png";
+import img1 from "../../../../assets/imgs/choose-us-img.png";
 import { Choose } from "./constants";
 
 export default function ChooseUs() {

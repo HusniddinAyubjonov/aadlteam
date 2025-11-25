@@ -1,6 +1,6 @@
-import img1 from '../../assets/icon/choose-us-icon1.svg'
-import img2 from '../../assets/icon/choose-us-icon2.svg'
-import img3 from '../../assets/icon/choose-us-icon3.svg'
+import img1 from '../../../../assets/icon/choose-us-icon1.svg'
+import img2 from '../../../../assets/icon/choose-us-icon2.svg'
+import img3 from '../../../../assets/icon/choose-us-icon3.svg'
 
 export const Choose = [
   {

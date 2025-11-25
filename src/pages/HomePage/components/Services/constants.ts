@@ -1,8 +1,8 @@
-import img1 from '../../assets/icon/web-site-icon.svg'
-import img2 from '../../assets/icon/web-product-development-icon.svg'
-import img3 from '../../assets/icon/ai-integration-icon.svg'
-import img4 from '../../assets/icon/secure-auth-icon.svg'
-import img5 from '../../assets/imgs/ios-mobile-img.png'
+import img1 from '../../../../assets/icon/web-site-icon.svg'
+import img2 from '../../../../assets/icon/web-product-development-icon.svg'
+import img3 from '../../../../assets/icon/ai-integration-icon.svg'
+import img4 from '../../../../assets/icon/secure-auth-icon.svg'
+import img5 from '../../../../assets/imgs/ios-mobile-img.png'
 
 export const servicesData = [
   {
