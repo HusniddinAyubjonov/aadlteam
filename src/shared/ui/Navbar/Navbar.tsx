@@ -2,6 +2,7 @@ import { useState } from "react";
 import style from "./Navbar.module.css";
 import logo from "/public/logo.svg";
 import menuIcon from "../../icon/menu-icon.svg";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,10 +18,10 @@ export default function Navbar() {
 
         <ul className={style.navLinks}>
           <li>
-            <a href='#'>Home</a>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <a href='#'>About</a>
+            <Link to='/AboutPage'>About</Link>
           </li>
           <li>
             <a href='#'>Pricing</a>

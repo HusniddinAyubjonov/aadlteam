@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./ScrollToTop";
 
-const HomePage = lazy(() => import("./HomePage/HomePage"));
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const AboutPage = lazy(() => import("./pages/aboutPage/AboutPage"));
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         }>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/AboutPage' element={<AboutPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
