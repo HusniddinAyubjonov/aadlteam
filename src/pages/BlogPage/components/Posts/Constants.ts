@@ -1,7 +1,7 @@
 import img1 from '../../../../assets/imgs/news-img.png'
 import avatar from '../../../../assets/icon/avatar.svg'
 
-export const New = [{
+export const Post = [{
     img: img1,
     btnText: 'Products',
     title: 'The Basics about IT',

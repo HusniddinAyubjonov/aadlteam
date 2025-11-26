@@ -1,4 +1,4 @@
-import { New } from "./Constants";
+import { Post } from "./Constants";
 import style from "./Posts.module.css";
 
 export default function Posts() {
@@ -16,7 +16,7 @@ export default function Posts() {
         </span>
 
         <div className={style.cards}>
-          {New.map((info, index) => (
+          {Post.map((info, index) => (
             <div key={index} className={style.card}>
               <img src={info.img} alt='image' />
               <button>{info.btnText}</button>
