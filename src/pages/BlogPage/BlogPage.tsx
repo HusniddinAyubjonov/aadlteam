@@ -2,6 +2,7 @@ import Footer from "../../shared/ui/Footer/Footer";
 import Navbar from "../../shared/ui/Navbar/Navbar";
 import style from "./BlogPage.module.css";
 import HeaderBlog from "./components/HeaderBlog/HeaderBlog";
+import Posts from "./components/Posts/Posts";
 
 export default function BlogPage() {
   return (
@@ -19,6 +20,7 @@ export default function BlogPage() {
         </div>
       </section>
       <HeaderBlog />
+      <Posts />
       <Footer />
     </>
   );
