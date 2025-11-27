@@ -1,0 +1,90 @@
+.container {
+  width: 945px;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 70px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header div img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+header div h2 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+header div h3 {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+header span {
+  display: flex;
+  flex-direction: column;
+}
+
+header span h1 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 66px;
+  line-height: 79.99px;
+  letter-spacing: -1px;
+  vertical-align: middle;
+  margin-top: 40px;
+}
+
+header span p {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  margin-top: 16px;
+}
+
+@media (max-width: 391px) {
+  .container {
+    width: 358px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-top: 48px;
+  }
+
+  header span h1 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 32px;
+    width: 358px;
+  }
+
+  header span p {
+    font-size: 16px;
+    line-height: 26px;
+    width: 358px;
+  }
+}
