@@ -1,6 +1,6 @@
-import Footer from "../../shared/ui/Footer/Footer";
-import Header from "../../shared/ui/Header/Header";
-import Navbar from "../../shared/ui/Navbar/Navbar";
+import Footer from "../../ui-components/ui/Footer/Footer";
+import Header from "../../ui-components/ui/Header/Header";
+import Navbar from "../../ui-components/ui/Navbar/Navbar";
 import Advantages from "./components/Advantages/Advantages";
 import BuildFeature from "./components/BuildFeature/BuildFeature";
 import ChooseUs from "./components/ChooseUs/ChooseUs";
@@ -14,8 +14,8 @@ export default function HomePage() {
     <div>
       <Navbar />
       <Header
-        title='A leading web-studio to take your business to the next level'
-        description='We create modern, user-friendly websites optimized for all devices. Our solutions suit any purpose — from personal projects to large-scale platforms.'
+        title="A leading web-studio to take your business to the next level"
+        description="We create modern, user-friendly websites optimized for all devices. Our solutions suit any purpose — from personal projects to large-scale platforms."
       />
       <Services />
       <Advantages />

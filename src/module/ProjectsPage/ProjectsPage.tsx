@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Footer from "../../shared/ui/Footer/Footer";
-import Navbar from "../../shared/ui/Navbar/Navbar";
+import Footer from "../../ui-components/ui/Footer/Footer";
+import Navbar from "../../ui-components/ui/Navbar/Navbar";
 import { Projects } from "./Constants";
 import style from "./ProjectsPage.module.css";
 
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             {Projects.map((info, index) => (
               <Link to={info.link}>
                 <div key={index} className={style.card}>
-                  <img src={info.img} alt='image' />
+                  <img src={info.img} alt="image" />
                   <button>{info.btnText}</button>
                   <h3>{info.title}</h3>
                   <p>{info.description}</p>

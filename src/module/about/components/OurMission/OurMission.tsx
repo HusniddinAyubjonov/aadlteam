@@ -18,7 +18,7 @@ export default function OurMission() {
           ))}
         </div>
       </div>
-      <img src={img} alt='world img' />
+      <img src={img} alt="world img" />
     </section>
   );
 }

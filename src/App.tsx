@@ -1,16 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./scroll-to-top.component";
 
-const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
-const AboutPage = lazy(() => import("./pages/aboutPage/AboutPage"));
-const PricingPage = lazy(() => import("./pages/PricingPage/PricingPage"));
-const BlogPage = lazy(() => import("./pages/BlogPage/BlogPage"));
-const ProjectsPage = lazy(() => import("./pages/ProjectsPage/ProjectsPage"));
-const ContactUsPage = lazy(() => import("./pages/ContactUsPage/ContactUsPage"));
-const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
-const Project = lazy(() => import("./pages/Project/Project"));
+const Home = lazy(() => import("./module/HomePage/HomePage"));
+const About = lazy(() => import("./module/about/about.component"));
+const Pricing = lazy(() => import("./module/PricingPage/PricingPage"));
+const Blog = lazy(() => import("./module/BlogPage/BlogPage"));
+const Projects = lazy(() => import("./module/ProjectsPage/ProjectsPage"));
+const ContactUs = lazy(() => import("./module/ContactUsPage/ContactUsPage"));
+const NotFound = lazy(() => import("./module/NotFoundPage/NotFoundPage"));
+const Project = lazy(() => import("./module/Project/Project"));
 
 function App() {
   return (
@@ -23,19 +23,21 @@ function App() {
               textAlign: "center",
               color: "#88B702",
               marginTop: "300px",
-            }}>
+            }}
+          >
             Loading...
           </h1>
-        }>
+        }
+      >
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/AboutPage' element={<AboutPage />} />
-          <Route path='/PricingPage' element={<PricingPage />} />
-          <Route path='/BlogPage' element={<BlogPage />} />
-          <Route path='/ProjectsPage' element={<ProjectsPage />} />
-          <Route path='/ContactUsPage' element={<ContactUsPage />} />
-          <Route path='/Project' element={<Project />} />
-          <Route path='*' element={<NotFoundPage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/AboutPage" element={<About />} />
+          <Route path="/PricingPage" element={<Pricing />} />
+          <Route path="/BlogPage" element={<Blog />} />
+          <Route path="/ProjectsPage" element={<Projects />} />
+          <Route path="/ContactUsPage" element={<ContactUs />} />
+          <Route path="/Project" element={<Project />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

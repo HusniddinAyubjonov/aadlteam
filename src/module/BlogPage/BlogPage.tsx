@@ -1,5 +1,5 @@
-import Footer from "../../shared/ui/Footer/Footer";
-import Navbar from "../../shared/ui/Navbar/Navbar";
+import Footer from "../../ui-components/ui/Footer/Footer";
+import Navbar from "../../ui-components/ui/Navbar/Navbar";
 import style from "./BlogPage.module.css";
 import HeaderBlog from "./components/HeaderBlog/HeaderBlog";
 import Posts from "./components/Posts/Posts";

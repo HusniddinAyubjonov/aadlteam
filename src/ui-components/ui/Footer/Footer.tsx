@@ -8,7 +8,7 @@ export default function Footer() {
     <footer>
       <div className={style.container}>
         <div className={style.footerP1}>
-          <img src={logo} alt='logo' />
+          <img src={logo} alt="logo" />
           <div className={style.socials}>
             <div>
               <FaInstagram />
@@ -30,25 +30,25 @@ export default function Footer() {
             <div className={style.linksSec}>
               <ul className={style.links}>
                 <li>
-                  <Link to='/'>Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to='/AboutPage'>About</Link>
+                  <Link to="/AboutPage">About</Link>
                 </li>
                 <li>
-                  <Link to='/PricingPage'>Pricing</Link>
+                  <Link to="/PricingPage">Pricing</Link>
                 </li>
               </ul>
 
               <ul className={style.links}>
                 <li>
-                  <Link to='/ProjectsPage'>projects</Link>
+                  <Link to="/ProjectsPage">projects</Link>
                 </li>
                 <li>
-                  <Link to='/BlogPage'>Blog</Link>
+                  <Link to="/BlogPage">Blog</Link>
                 </li>
                 <li>
-                  <Link to='/ContactUsPage'>contact us</Link>
+                  <Link to="/ContactUsPage">contact us</Link>
                 </li>
               </ul>
             </div>

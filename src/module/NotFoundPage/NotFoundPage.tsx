@@ -1,5 +1,5 @@
 import style from "./NotFoundPage.module.css";
-import Navbar from "../../shared/ui/Navbar/Navbar";
+import Navbar from "../../ui-components/ui/Navbar/Navbar";
 import { Link } from "react-router-dom";
 
 export default function NotFoundPage() {
@@ -15,10 +15,10 @@ export default function NotFoundPage() {
             try again. Or click the button below.
           </p>
           <div>
-            <Link to='/PricingPage'>
+            <Link to="/PricingPage">
               <button>View Pricing</button>
             </Link>
-            <Link to='/'>
+            <Link to="/">
               <button>Go Home</button>
             </Link>
           </div>

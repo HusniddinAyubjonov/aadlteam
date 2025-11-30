@@ -1,5 +1,5 @@
-import Footer from "../../shared/ui/Footer/Footer";
-import Navbar from "../../shared/ui/Navbar/Navbar";
+import Footer from "../../ui-components/ui/Footer/Footer";
+import Navbar from "../../ui-components/ui/Navbar/Navbar";
 import { FAQ } from "./components/Faq/Faq";
 import { Contact } from "./constants";
 import style from "./ContactUsPage.module.css";
@@ -14,27 +14,27 @@ export default function ContactUsPage() {
           <form className={style.form}>
             <div className={style.field}>
               <label>NAME</label>
-              <input type='text' placeholder='Full Name' />
+              <input type="text" placeholder="Full Name" />
             </div>
 
             <div className={style.field}>
               <label>EMAIL</label>
-              <input type='email' placeholder='email@example.com' />
+              <input type="email" placeholder="email@example.com" />
             </div>
 
             <div className={style.field}>
               <label>COMPANY</label>
-              <input type='text' placeholder='Company Name' />
+              <input type="text" placeholder="Company Name" />
             </div>
 
             <div className={style.field}>
               <label>SUBJECT</label>
-              <input type='text' placeholder='How can we help?' />
+              <input type="text" placeholder="How can we help?" />
             </div>
 
             <div className={style.fieldFull}>
               <label>MESSAGE</label>
-              <textarea placeholder='Your Message'></textarea>
+              <textarea placeholder="Your Message"></textarea>
             </div>
 
             <button className={style.sendBtn}>SEND MESSAGE</button>
@@ -50,10 +50,11 @@ export default function ContactUsPage() {
               {Contact.map((item, index) => (
                 <div key={index} className={style.email}>
                   <div>
-                    <img src={item.img} alt='icon' />
+                    <img src={item.img} alt="icon" />
                   </div>
                   <a
-                    href={`mailto:${item.email}?subject=Hello&body=Write your message here`}>
+                    href={`mailto:${item.email}?subject=Hello&body=Write your message here`}
+                  >
                     {item.email}
                   </a>
                 </div>

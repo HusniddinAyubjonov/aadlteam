@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Footer from "../../shared/ui/Footer/Footer";
-import Navbar from "../../shared/ui/Navbar/Navbar";
+import Footer from "../../ui-components/ui/Footer/Footer";
+import Navbar from "../../ui-components/ui/Navbar/Navbar";
 import { Pricing } from "./constants";
 import style from "./PricingPage.module.css";
 
@@ -31,7 +31,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to='/ContactUsPage'>
+                <Link to="/ContactUsPage">
                   <button className={style.btnNextPage}>{price.button}</button>
                 </Link>
               </div>
