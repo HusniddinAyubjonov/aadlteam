@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #050605;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+} */
+
+@font-face {
+  font-family: "DelaGothicOne-Regular";
+  src: url("../assets/fonts/DelaGothicOne/DelaGothicOne-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: url("../assets/fonts/Montserrat/Montserrat-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../assets/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../assets/fonts/Montserrat/Montserrat-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url("../assets/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Urbanist-ExtraBold";
+  src: url("../assets/fonts/Urbanist/Urbanist-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Urbanist-Regular";
+  src: url("../assets/fonts/Urbanist/Urbanist-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+/* --------------------------------------------------------------------------- */
+/* RESET */
+/* --------------------------------------------------------------------------- */
+
+input {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #050605;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+input {
+  font-size: inherit;
+}
+
+img {
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+/* --------------------------------------------------------------------------- */
+/* GLOBALS */
+/* --------------------------------------------------------------------------- */
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+/* --------------------------------------------------------------------------- */
+/* FORM CONTROLS */
+/* --------------------------------------------------------------------------- */
+
+input,
+textarea {
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 0.5rem;
+  background-color: #fff0;
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  padding: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------- */
+/* SCROLL */
+/* --------------------------------------------------------------------------- */
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}

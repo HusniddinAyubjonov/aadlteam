@@ -1,9 +1,9 @@
-import "./App.css";
+import style from './global.module.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./scroll-to-top.component";
 
-const Home = lazy(() => import("./module/HomePage/HomePage"));
+const Home = lazy(() => import("./module/home/home"));
 const About = lazy(() => import("./module/about/about.component"));
 const Pricing = lazy(() => import("./module/PricingPage/PricingPage"));
 const Blog = lazy(() => import("./module/BlogPage/BlogPage"));

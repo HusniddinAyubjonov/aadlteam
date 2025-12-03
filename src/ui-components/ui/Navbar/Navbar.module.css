@@ -1,29 +1,29 @@
 .container {
-  width: 1180px;
-  margin: 0 auto;
+  padding: 0 21rem;
 }
 
 .navbar {
-  height: 100px;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar img {
-  width: 72px;
+.logo {
+  width: 7.2rem;
+  height: 3.4rem;
 }
 
 .navLinks {
   display: flex;
-  gap: 27px;
+  gap: 2.7rem;
 }
 
 .navLinks a {
   font-weight: 500;
   font-style: Medium;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   transition: 0.1s ease;
@@ -36,15 +36,15 @@
 
 .downloadCV {
   background-color: #88b702;
-  padding: 20px 32px;
+  padding: 2rem 3.2rem;
   color: white;
-  border-radius: 80px;
+  border-radius: 8rem;
   border: none;
   text-decoration: none;
   font-weight: 700;
   font-style: Bold;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
   letter-spacing: 1.6px;
   text-align: center;
   vertical-align: middle;
@@ -66,22 +66,75 @@
   display: none;
 }
 
-@media (max-width: 391px) {
+@media (min-width: 940px) and (max-width: 1280px) {
   .container {
-    width: 358px;
-    margin: 0 auto;
+    padding: 0 6rem;
+  }
+
+  .logo {
+    width: 5.8rem;
+    height: 2.7rem;
+  }
+
+  .navLinks {
+    gap: 2rem;
+  }
+
+  .navLinks a {
+    font-size: 1.4rem;
+  }
+
+  .downloadCV {
+    padding: 1.6rem 2.8rem;
+    border-radius: 8rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .logo {
+    width: 5rem;
+    height: 2.3rem;
+  }
+
+  .navLinks {
+    gap: 1.8rem;
+  }
+
+  .navLinks a {
+    font-size: 1.2rem;
+  }
+
+  .downloadCV {
+    padding: 1.4rem 2.2rem;
+    border-radius: 6rem;
+    font-size: 1.2rem;
+    font-style: normal;
+    line-height: 1.2rem;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding: 0 2.4rem;
   }
 
   .navbar {
     height: auto;
-    padding: 12px 0;
+    padding: 1.2rem 0;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 1.2rem;
   }
 
-  .navbar img {
-    width: 48px;
+  .logo {
+    width: 9.7rem;
+    height: 4.5rem;
   }
 
   .navLinks {
@@ -99,7 +152,7 @@
   }
 
   .menuBtn img {
-    width: 45px;
+    width: 4.5rem;
   }
 
   .mobileMenu {
@@ -110,7 +163,6 @@
     left: 0;
     width: 100%;
     padding: 24px 20px;
-
     transform: translateY(-200%);
     transition: 0.3s ease;
     z-index: 99;
@@ -124,11 +176,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
   }
 
   .mobileMenu a {
-    font-size: 16px;
+    font-size: 2.4rem;
     text-transform: uppercase;
     letter-spacing: 1.4px;
     font-weight: 600;
@@ -136,15 +188,14 @@
   }
 
   .mobileCV {
-    margin-top: 24px;
+    margin: 2.4rem 2rem;
     background-color: #88b702;
-    padding: 18px;
+    padding: 2.7rem 6rem;
     color: white;
-    border-radius: 80px;
-    width: 100%;
+    border-radius: 8rem;
     border: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: 1.6px;
     cursor: pointer;
   }

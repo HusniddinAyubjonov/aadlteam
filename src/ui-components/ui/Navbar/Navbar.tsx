@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./Navbar.module.css";
 import logo from "/public/logo.svg";
-import menuIcon from "../../icon/menu-icon.svg";
+import menuIcon from "../../../assets/icon/menu-icon.svg";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <div className={style.container}>
       <nav className={style.navbar}>
-        <img src={logo} alt="logo" />
+        <img className={style.logo} src={logo} alt="logo" />
 
         <ul className={style.navLinks}>
           <li>
@@ -43,6 +43,7 @@ export default function Navbar() {
           <img src={menuIcon} alt="icon" />
         </button>
       </nav>
+
       {isOpen && (
         <div className={`${style.mobileMenu} ${style.open}`}>
           <ul>
