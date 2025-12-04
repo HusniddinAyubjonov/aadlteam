@@ -6,6 +6,9 @@ import img5 from "../../assets/imgs/ios-mobile-img.png";
 import img6 from "../../assets/icon/advantages-icon1.svg";
 import img7 from "../../assets/icon/advantages-icon2.svg";
 import img8 from "../../assets/icon/advantages-icon3.svg";
+import img9 from '../../assets/icon/choose-us-icon1.svg'
+import img10 from '../../assets/icon/choose-us-icon2.svg'
+import img11 from '../../assets/icon/choose-us-icon3.svg'
 
 export const servicesData = [
   {
@@ -52,5 +55,20 @@ export const advantagesData = [
   {
     icon: img8,
     title: "Enterprise-grade security for all your operations.",
+  },
+];
+
+export const chooseUsData = [
+  {
+    icon: img9,
+    title: "Full confidentiality powered by advanced security standards.",
+  },
+  {
+    icon: img10,
+    title: "Reliable systems built for continuous, stable performance.",
+  },
+  {
+    icon: img11,
+    title: "Professional assistance whenever your business needs it.",
   },
 ];
