@@ -1,17 +1,16 @@
 import clsx from "clsx";
+import style from "./home.module.css";
 // import Footer from "../../ui-components/ui/Footer/Footer";
 import Navbar from "../../ui-components/ui/Navbar/Navbar";
+import Review from "./components/Reviews/Review";
 // import News from "./components/News/News";
-// import Review from "./components/Reviews/Review";
 // import Services from "./components/Services/Service";
 // import StartWithMe from "./components/StartWith/StartWith";
-import style from "./home.module.css";
 import { advantagesData, chooseUsData, servicesData } from "./constants";
 
 import img1 from "../../assets/imgs/our-advanture-img.png";
 import img2 from "../../assets/imgs/choose-us-img.png";
 import img3 from "../../assets/imgs/build-feauture.png";
-
 
 export default function Home() {
   return (
@@ -146,7 +145,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <Review /> */}
+      {/*---------------------------------------------------------------------------
+      /// Reviews
+      --------------------------------------------------------------------------- */}
+
+      <Review />
       {/* <StartWithMe /> */}
       {/* <News /> */}
       {/* <Footer /> */}

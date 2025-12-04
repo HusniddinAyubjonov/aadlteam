@@ -3,7 +3,6 @@ import style from "./Review.module.css";
 
 export default function Review() {
   return (
-    <section className={style.container}>
       <div className={style.review}>
         <h1>What our users say?</h1>
         <button>view all comments</button>
@@ -23,6 +22,5 @@ export default function Review() {
           ))}
         </div>
       </div>
-    </section>
   );
 }

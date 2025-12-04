@@ -1,30 +1,24 @@
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
 .review {
-  margin-top: 207px;
+  padding: 20.6rem 12.6rem;
 }
 
 .review h1 {
   font-weight: 700;
   font-style: Bold;
-  font-size: 42px;
-  line-height: 55.02px;
-  margin-bottom: 40px;
+  font-size: 4.2rem;
+  line-height: 5.5rem;
+  margin-bottom: 4rem;
 }
 
 .review button {
   background-color: #88b702;
-  margin-top: 22px;
-  width: 358px;
-  height: 70px;
-  gap: 4px;
-  border-radius: 80px;
+  margin-top: 2.2rem;
+  width: 35.8rem;
+  height: 7rem;
+  border-radius: 8rem;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
   letter-spacing: 1.6px;
   text-align: center;
   color: #ffffff;
@@ -32,8 +26,7 @@
 }
 
 .card {
-  flex: 0 0 586px;
-  height: 344px;
+  width: 48.5%;
   background: #1e1e1e;
   border-radius: 40px;
   padding: 65px 50px;
@@ -41,43 +34,35 @@
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 26px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 20px;
-  scrollbar-width: none;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
 }
 
 .card p {
   font-weight: 400;
   font-style: Regular;
-  font-size: 18px;
-  line-height: 32px;
-  width: 468px;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
 }
 
 .user {
   display: flex;
   align-items: center;
-  margin-top: 24px;
-  gap: 22px;
+  margin-top: 2.4rem;
+  gap: 2.2rem;
 }
 
 .user img {
-  width: 58px;
-  height: 58px;
+  width: 5.8rem;
+  height: 5.8rem;
   border-radius: 50%;
 }
 
 .user_info h3 {
   font-weight: 700;
   font-style: Bold;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   letter-spacing: 0.8px;
   vertical-align: middle;
   text-transform: uppercase;
@@ -85,8 +70,8 @@
 
 .user_info p {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   letter-spacing: 0.8px;
   vertical-align: middle;
   text-transform: uppercase;
