@@ -33,22 +33,22 @@ export default function Footer() {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/AboutPage">About</Link>
+                  <Link to="/About">About</Link>
                 </li>
                 <li>
-                  <Link to="/PricingPage">Pricing</Link>
+                  <Link to="/Pricing">Pricing</Link>
                 </li>
               </ul>
 
               <ul className={style.links}>
                 <li>
-                  <Link to="/ProjectsPage">projects</Link>
+                  <Link to="/Projects">projects</Link>
                 </li>
                 <li>
-                  <Link to="/BlogPage">Blog</Link>
+                  <Link to="/Blog">Blog</Link>
                 </li>
                 <li>
-                  <Link to="/ContactUsPage">contact us</Link>
+                  <Link to="/ContactUs">contact us</Link>
                 </li>
               </ul>
             </div>

@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import style from "./home.module.css";
 import Navbar from "../../ui-components/ui/Navbar/Navbar";
-// import Footer from "../../ui-components/ui/Footer/Footer";
-// import Services from "./components/Services/Service";
+import Footer from "../../ui-components/ui/Footer/Footer";
 import {
   advantagesData,
   chooseUsData,
@@ -241,8 +240,7 @@ export default function Home() {
         <button className={style.newsMoreBtn}>View All Articles</button>
       </div>
 
-      {/* <News /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
