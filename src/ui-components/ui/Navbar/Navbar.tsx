@@ -4,7 +4,9 @@ import logo from "/public/logo.svg";
 import menuIcon from "../../../assets/icon/menu-icon.svg";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export function Navbar() {
+  // ---------------------------------------------------------------------------
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleIsOpen = () => {

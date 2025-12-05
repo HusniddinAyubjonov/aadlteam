@@ -1,7 +1,5 @@
 import clsx from "clsx";
 import style from "./home.module.css";
-import Navbar from "../../ui-components/ui/Navbar/Navbar";
-import Footer from "../../ui-components/ui/Footer/Footer";
 import {
   advantagesData,
   chooseUsData,
@@ -15,8 +13,12 @@ import img1 from "../../assets/imgs/our-advanture-img.png";
 import img2 from "../../assets/imgs/choose-us-img.png";
 import img3 from "../../assets/imgs/build-feauture.png";
 import img4 from "../../assets/imgs/video.png";
+import { Navbar } from "../../ui-components/ui/Navbar/Navbar";
+import { Footer } from "../../ui-components/ui/Footer/Footer";
 
 export default function Home() {
+  // ---------------------------------------------------------------------------
+
   return (
     <div>
       <Navbar />

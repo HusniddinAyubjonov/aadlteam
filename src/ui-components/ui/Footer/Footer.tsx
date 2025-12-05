@@ -3,7 +3,9 @@ import logo from "../../../../public/logo.svg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export function Footer() {
+  // ---------------------------------------------------------------------------
+
   return (
     <footer>
       <div className={style.container}>
