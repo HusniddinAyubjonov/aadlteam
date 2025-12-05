@@ -12,7 +12,9 @@ import img11 from "../../assets/icon/choose-us-icon3.svg";
 import img12 from "../../assets/icon/start-with-icon1.svg";
 import img13 from "../../assets/icon/start-with-icon2.svg";
 import img14 from "../../assets/icon/start-with-icon3.svg";
+import img15 from "../../assets/imgs/news-img.png";
 import avatar from "../../assets/icon/avatar.svg";
+import avatar2 from "../../assets/icon/avatar.svg";
 
 export const servicesData = [
   {
@@ -106,5 +108,38 @@ export const startWithData = [
   {
     icon: img14,
     title: "Start building",
+  },
+];
+
+export const newData = [
+  {
+    img: img15,
+    btnText: "Products",
+    title: "The Basics about IT",
+    description:
+      "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    avatar: avatar2,
+    fullName: "Alex Turner",
+    aboutUser: "August 2, 2021",
+  },
+  {
+    img: img15,
+    btnText: "Products",
+    title: "The Basics about IT",
+    description:
+      "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    avatar: avatar2,
+    fullName: "Alex Turner",
+    aboutUser: "August 2, 2021",
+  },
+  {
+    img: img15,
+    btnText: "Products",
+    title: "The Basics about IT",
+    description:
+      "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
+    avatar: avatar2,
+    fullName: "Alex Turner",
+    aboutUser: "August 2, 2021",
   },
 ];

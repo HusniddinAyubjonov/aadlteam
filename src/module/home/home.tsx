@@ -2,11 +2,11 @@ import clsx from "clsx";
 import style from "./home.module.css";
 import Navbar from "../../ui-components/ui/Navbar/Navbar";
 // import Footer from "../../ui-components/ui/Footer/Footer";
-// import News from "./components/News/News";
 // import Services from "./components/Services/Service";
 import {
   advantagesData,
   chooseUsData,
+  newData,
   reviewData,
   servicesData,
   startWithData,
@@ -201,6 +201,44 @@ export default function Home() {
           </div>
         </div>
         <img src={img4} alt="phone" className={style.video} />
+      </div>
+
+      {/*---------------------------------------------------------------------------
+      /// News
+      --------------------------------------------------------------------------- */}
+
+      <div className={style.news}>
+        <span className={style.newTexts}>
+          <h1 className={style.newsTitle}>Browse our latest news</h1>
+          <p className={style.newsDescription}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non
+            neque orci amet, amet .
+          </p>
+        </span>
+
+        <div className={style.newCards}>
+          {newData.map((info, index) => (
+            <div key={index} className={style.newCard}>
+              <img src={info.img} alt="image" />
+              <button className={style.newCardBtn}>{info.btnText}</button>
+              <h3 className={style.newCardTitle}>{info.title}</h3>
+              <p className={style.newCardDescription}>{info.description}</p>
+              <hr className={style.newCardLine} />
+              <div className={style.newCardUser}>
+                <img
+                  className={style.newCardAvatar}
+                  src={info.avatar}
+                  alt="avatar"
+                />
+                <span className={style.userTexts}>
+                  <h4 className={style.userFullName}>{info.fullName}</h4>
+                  <h5 className={style.aboutUser}>{info.aboutUser}</h5>
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className={style.newsMoreBtn}>View All Articles</button>
       </div>
 
       {/* <News /> */}
