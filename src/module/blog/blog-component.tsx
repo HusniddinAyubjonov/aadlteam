@@ -1,7 +1,6 @@
 import { Footer } from "../../ui-components/Footer/Footer";
 import { Navbar } from "../../ui-components/Navbar/Navbar";
 import styles from "./blog.module.css";
-// import Posts from "./components/Posts/Posts";
 
 import img from "../../assets/imgs/news-img.png";
 import { postData } from "./constants";
@@ -96,7 +95,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* <Posts /> */}
       <Footer />
     </>
   );
