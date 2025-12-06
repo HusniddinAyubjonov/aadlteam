@@ -6,7 +6,7 @@ import ScrollToTop from "./scroll-to-top.component";
 const Home = lazy(() => import("./module/home/home-component"));
 const About = lazy(() => import("./module/about/about-component"));
 const Pricing = lazy(() => import("./module/pricing/pricing-component"));
-const Blog = lazy(() => import("./module/BlogPage/BlogPage"));
+const Blog = lazy(() => import("./module/blog/blog-component"));
 const ProjectList = lazy(() => import("./module/ProjectsPage/ProjectsPage"));
 const ContactUs = lazy(() => import("./module/ContactUsPage/ContactUsPage"));
 const NotFound = lazy(() => import("./module/NotFoundPage/NotFoundPage"));

@@ -1,0 +1,227 @@
+.container {
+  padding: 0 12.6rem;
+}
+
+.blog {
+  margin-top: 4rem;
+  margin-bottom: 11rem;
+}
+
+.blogTexts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blogTitle {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 6.6rem;
+  line-height: 8rem;
+  letter-spacing: -1px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.blogDescription {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  width: 46%;
+  margin-top: 0.8rem;
+}
+
+/*---------------------------------------------------------------------------
+      /// HeaderBlog
+--------------------------------------------------------------------------- */
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  border-radius: 4rem;
+}
+
+.headCard {
+  padding-top: 5.8rem;
+  padding-bottom: 5.8rem;
+  padding-left: 4.6rem;
+  width: 45%;
+}
+
+.headCardBtn {
+  padding: 1rem 1.6rem;
+  border-radius: 1000px;
+  background-color: #88b702;
+  color: #fff;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.7px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.headCardTitle {
+  margin-top: 2.1rem;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2.8rem;
+  line-height: 4rem;
+  letter-spacing: 0.28px;
+  vertical-align: middle;
+}
+
+.headCardDescription {
+  margin-top: 1.6rem;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.headImg {
+  width: 40%;
+  height: auto;
+}
+
+@media (min-width: 940px) and (max-width: 1280px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .blogDescription {
+    width: 55%;
+  }
+
+  /*---------------------------------------------------------------------------
+      /// HeaderBlog
+--------------------------------------------------------------------------- */
+
+  .headCard {
+    padding-left: 3rem;
+    width: 50%;
+  }
+
+  .headImg {
+    width: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .blogTexts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+
+  .blogTitle {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: start;
+  }
+
+  .blogDescription {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 0;
+    text-align: start;
+  }
+
+  /*---------------------------------------------------------------------------
+      /// HeaderBlog
+--------------------------------------------------------------------------- */
+  .head {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding: 0 2.4rem;
+  }
+
+  .blogTexts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+
+  .blogTitle {
+    font-size: 3.8rem;
+    line-height: 4.6rem;
+    text-align: start;
+  }
+
+  .blogDescription {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 0;
+    text-align: start;
+  }
+
+  /*---------------------------------------------------------------------------
+      /// HeaderBlog
+--------------------------------------------------------------------------- */
+
+  .head {
+    display: none;
+  }
+
+  .headCard {
+    width: 100%;
+    padding: 4rem 2.4rem;
+  }
+
+  .headImg {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 0 0 4rem 4rem;
+  }
+
+  .headCardTitle {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  .headCardDescription {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 390px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .blogTitle {
+    font-size: 3.4rem;
+    line-height: 4rem;
+  }
+
+  .blogDescription {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  /*---------------------------------------------------------------------------
+      /// HeaderBlog
+--------------------------------------------------------------------------- */
+
+  .head {
+    display: none;
+  }
+}

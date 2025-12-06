@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { pricingData } from "./constants";
 import styles from "./pricing.module.css";
 import { Navbar } from "../../ui-components/Navbar/Navbar";
 import { Footer } from "../../ui-components/Footer/Footer";
+import { pricingData } from "./price-list";
 
 export default function PricingPage() {
   return (
