@@ -237,7 +237,7 @@
 
 @media (min-width: 940px) and (max-width: 1280px) {
   .container {
-    padding: 0 4rem;
+    padding: 0 6rem;
   }
 
   .blogDescription {
@@ -287,7 +287,6 @@
   }
 
   .blogDescription {
-    width: 100%;
     font-size: 1.6rem;
     line-height: 2.6rem;
     margin-top: 0;

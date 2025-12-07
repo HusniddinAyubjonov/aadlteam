@@ -1,0 +1,237 @@
+.container {
+  padding: 0 12.6rem;
+}
+
+.project {
+  margin-top: 17rem;
+  margin-bottom: 11rem;
+}
+
+.project span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project span h1 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 6.6rem;
+  line-height: 8rem;
+  letter-spacing: -1px;
+  vertical-align: middle;
+}
+
+.project span p {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  width: 48%;
+  margin-top: 0.8rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.6rem;
+}
+
+.card {
+  overflow: hidden;
+  width: 38rem;
+  height: 100%;
+  border-radius: 4rem;
+  background-color: #1e1e1e;
+}
+
+.card button {
+  padding: 1rem 1.4rem;
+  border-radius: 1000px;
+  background-color: #88b702;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.7px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-left: 2.2rem;
+  margin-top: -2.2rem;
+}
+
+.card h3 {
+  margin-left: 2.2rem;
+  margin-top: 4rem;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2.2rem;
+  line-height: 3.1rem;
+}
+
+.card p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin-left: 2.2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 4.8rem;
+  width: 90%;
+}
+
+@media (min-width: 940px) and (max-width: 1280px) {
+  .container {
+    padding: 0 6rem;
+  }
+
+  .project span p {
+    width: 55%;
+  }
+
+  .cards {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 34rem;
+  }
+
+  .card p {
+    width: 86%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 940px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .project {
+    margin-top: 8rem;
+  }
+
+  .project span {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .project span h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .project span p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 0;
+    text-align: center;
+    width: 70%;
+  }
+
+  .cards {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 32rem;
+  }
+
+  .card p {
+    width: 86%;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+  .container {
+    padding: 0 2.4rem;
+  }
+
+  .project {
+    margin-top: 6rem;
+  }
+
+  .project span {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project span h1 {
+    font-size: 3.8rem;
+    line-height: 4.6rem;
+    text-align: start;
+  }
+
+  .project span p {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-top: 0;
+    text-align: start;
+  }
+
+  .cards {
+    gap: 1.6rem;
+  }
+
+  .card {
+    width: 35.8rem;
+  }
+
+  .card h3 {
+    font-size: 1.8rem;
+  }
+
+  .card p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    width: 88%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 389px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .project {
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+  }
+
+  .project span {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .project span h1 {
+    font-size: 3.4rem;
+    line-height: 4rem;
+  }
+
+  .project span p {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .cards {
+    gap: 1.6rem;
+  }
+
+  .card {
+    width: 28rem;
+  }
+
+  .card h3 {
+    font-size: 1.8rem;
+  }
+
+  .card p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    width: 88%;
+  }
+}

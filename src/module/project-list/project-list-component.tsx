@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Projects } from "./Constants";
-import style from "./ProjectsPage.module.css";
+import { Projects } from "./project-list";
+import style from "./project-list.module.css";
 import { Navbar } from "../../ui-components/Navbar/Navbar";
 import { Footer } from "../../ui-components/Footer/Footer";
 
