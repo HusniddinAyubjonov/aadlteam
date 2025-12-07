@@ -1,5 +1,3 @@
-import { Footer } from "../../ui-components/Footer/Footer";
-import { Navbar } from "../../ui-components/Navbar/Navbar";
 import styles from "./blog.module.css";
 
 import img from "../../assets/imgs/news-img.png";
@@ -11,7 +9,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <Navbar />
       <section>
         <div className={`${styles.blog} ${styles.container}`}>
           <span className={styles.blogTexts}>
@@ -95,7 +92,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

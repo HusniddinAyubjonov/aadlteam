@@ -1,7 +1,5 @@
 import styles from "./about.module.css";
 import { missionData, PrincipleList, skillsData } from "./constants";
-import { Navbar } from "../../ui-components/Navbar/Navbar";
-import { Footer } from "../../ui-components/Footer/Footer";
 
 import img from "../../assets/imgs/planet.png";
 
@@ -9,7 +7,6 @@ export default function About() {
   // ---------------------------------------------------------------------------
   return (
     <div>
-      <Navbar />
 
       <section className={styles.container}>
         <h1 className={styles.headTitle}>About Us</h1>
@@ -110,7 +107,6 @@ export default function About() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

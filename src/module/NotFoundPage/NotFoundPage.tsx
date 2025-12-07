@@ -1,11 +1,9 @@
-import { Navbar } from "../../ui-components/Navbar/Navbar";
 import style from "./NotFoundPage.module.css";
 import { Link } from "react-router-dom";
 
 export default function NotFoundPage() {
   return (
     <>
-      <Navbar/>
       <section className={style.container}>
         <div className={style.notFound}>
           <h1>404</h1>

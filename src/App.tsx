@@ -2,13 +2,17 @@ import style from "./global.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./scroll-to-top.component";
+import { Navbar } from "./ui-components/Navbar/Navbar";
+import { Footer } from "./ui-components/Footer/Footer";
 
 const Home = lazy(() => import("./module/home/home-component"));
 const About = lazy(() => import("./module/about/about-component"));
 const Pricing = lazy(() => import("./module/pricing/pricing-component"));
 const Blog = lazy(() => import("./module/blog/blog-component"));
-const ProjectList = lazy(() => import("./module/project-list/project-list-component"));
-const ContactUs = lazy(() => import("./module/ContactUsPage/ContactUsPage"));
+const ProjectList = lazy(
+  () => import("./module/project-list/project-list-component")
+);
+const ContactUs = lazy(() => import("./module/ContactUs/ContactUsPage"));
 const NotFound = lazy(() => import("./module/NotFoundPage/NotFoundPage"));
 
 function App() {
@@ -30,6 +34,7 @@ function App() {
           </h1>
         }
       >
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
@@ -39,6 +44,7 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </Suspense>
     </BrowserRouter>
   );

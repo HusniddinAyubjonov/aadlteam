@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./pricing.module.css";
-import { Navbar } from "../../ui-components/Navbar/Navbar";
-import { Footer } from "../../ui-components/Footer/Footer";
 import { pricingData } from "./price-list";
 
 export default function PricingPage() {
   return (
     <div>
-      <Navbar />
       <section className={styles.container}>
         <div className={styles.pricing}>
           <h1 className={styles.pricingTitle}>Pricing</h1>
@@ -39,7 +36,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }

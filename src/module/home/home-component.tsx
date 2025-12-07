@@ -13,15 +13,12 @@ import img1 from "../../assets/imgs/our-advanture-img.png";
 import img2 from "../../assets/imgs/choose-us-img.png";
 import img3 from "../../assets/imgs/build-feauture.png";
 import img4 from "../../assets/imgs/video.png";
-import { Navbar } from "../../ui-components/Navbar/Navbar";
-import { Footer } from "../../ui-components/Footer/Footer";
 
 export default function Home() {
   // ---------------------------------------------------------------------------
 
   return (
     <div>
-      <Navbar />
       <section className={style.container}>
         <h1 className={style.headTitle}>
           A leading web-studio to take your business to the next level
@@ -242,7 +239,6 @@ export default function Home() {
         <button className={style.newsMoreBtn}>View All Articles</button>
       </div>
 
-      <Footer />
     </div>
   );
 }

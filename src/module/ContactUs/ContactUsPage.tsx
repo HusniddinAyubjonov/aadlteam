@@ -1,5 +1,3 @@
-import { Footer } from "../../ui-components/Footer/Footer";
-import { Navbar } from "../../ui-components/Navbar/Navbar";
 import { FAQ } from "./components/Faq/Faq";
 import { Contact } from "./constants";
 import style from "./ContactUsPage.module.css";
@@ -7,7 +5,6 @@ import style from "./ContactUsPage.module.css";
 export default function ContactUsPage() {
   return (
     <>
-      <Navbar/>
       <section className={style.container}>
         <h1>Get in touch</h1>
         <div className={style.formBox}>
@@ -64,7 +61,6 @@ export default function ContactUsPage() {
         </div>
       </section>
       <FAQ />
-      <Footer />
     </>
   );
 }

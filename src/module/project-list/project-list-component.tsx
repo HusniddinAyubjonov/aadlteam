@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import { Projects } from "./project-list";
 import style from "./project-list.module.css";
-import { Navbar } from "../../ui-components/Navbar/Navbar";
-import { Footer } from "../../ui-components/Footer/Footer";
 
 export default function ProjectsPage() {
   return (
     <>
-      <Navbar />
       <section className={style.container}>
         <div className={style.project}>
           <span>
@@ -32,7 +29,6 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
