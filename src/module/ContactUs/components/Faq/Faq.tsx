@@ -18,7 +18,7 @@ export const FAQ = () => {
           <div className={styles.question} onClick={() => toggle(index)}>
             <span>{item.question}</span>
 
-            <span className={styles.icon}>{open === index ? "−" : "+"}</span>
+            <span className={styles.icon}>{open === index ? "-" : "+"}</span>
           </div>
 
           {open === index && <div className={styles.answer}>{item.answer}</div>}

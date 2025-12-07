@@ -12,7 +12,7 @@ const Blog = lazy(() => import("./module/blog/blog-component"));
 const ProjectList = lazy(
   () => import("./module/project-list/project-list-component")
 );
-const ContactUs = lazy(() => import("./module/ContactUs/ContactUsPage"));
+const ContactUs = lazy(() => import("./module/ContactUs/contact-us-component"));
 const NotFound = lazy(() => import("./module/NotFoundPage/NotFoundPage"));
 
 function App() {

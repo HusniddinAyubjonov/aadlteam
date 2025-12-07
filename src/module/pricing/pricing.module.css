@@ -190,7 +190,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 390px) and (max-width: 768px) {
   .container {
     padding: 0 2.4rem;
   }

@@ -31,7 +31,12 @@ button {
   background: none;
 } */
 
-@font-face {
+
+/* --------------------------------------------------------------------------- */
+/* FONT */
+/* --------------------------------------------------------------------------- */
+
+/* @font-face {
   font-family: "DelaGothicOne-Regular";
   src: url("../assets/fonts/DelaGothicOne/DelaGothicOne-Regular.ttf")
     format("truetype");
@@ -107,7 +112,7 @@ button {
   font-family: "Urbanist-Regular";
   src: url("../assets/fonts/Urbanist/Urbanist-Regular.ttf") format("truetype");
   font-weight: 400;
-}
+} */
 /* --------------------------------------------------------------------------- */
 /* RESET */
 /* --------------------------------------------------------------------------- */
