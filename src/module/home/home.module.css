@@ -2,6 +2,18 @@
   padding: 17rem 21rem;
 }
 
+.head {
+  z-index: 1;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(80, 120, 20, 0.4), rgba(0, 0, 0, 1));
+  z-index: -1;
+}
+
 .headTitle {
   padding: 0 2.4rem;
   font-weight: 700;
@@ -112,10 +124,10 @@
 
 .bigCard .icons .icon {
   position: absolute;
-  width: 34.8rem;
-  height: 50rem;
-  top: 21.5rem;
-  left: 5.5rem;
+  width: 30rem;
+  height: 40rem;
+  top: 28rem;
+  left: 4rem;
 }
 
 .bigCard .cardTitle {
@@ -125,7 +137,7 @@
 
 .bigCard .cardDescription {
   position: absolute;
-  width: 38.3rem;
+  width: 90%;
   top: 9.2rem;
 }
 
@@ -201,10 +213,17 @@
 
 .section {
   display: flex;
+  position: relative;
+  justify-content: space-between;
 }
 
 .imgLaptop {
-  height: 58.5rem;
+  position: absolute;
+  right: -200px; /* сдвигаем вправо за экран */
+  top: 54%;
+  transform: translateY(-50%);
+  width: 100rem; /* больше чем секция */
+  pointer-events: none;
 }
 
 .chooseUs {
@@ -470,12 +489,6 @@
   padding: 17rem 12.6rem;
 }
 
-.newTexts {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .newsTitle {
   font-weight: 700;
   font-style: Bold;
@@ -597,6 +610,12 @@
   text-align: center;
   margin-top: 4rem;
   margin-left: 40%;
+}
+
+@media (min-width: 1440px) {
+  .bigCard {
+    width: auto;
+  }
 }
 
 @media (min-width: 940px) and (max-width: 1280px) {
@@ -721,19 +740,23 @@
 
   .chooseUsTexts {
     padding: 0 6rem;
-    /* overflow: hidden; */
+    overflow: hidden;
   }
 
   .section {
     display: flex;
+    position: relative;
     justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
   }
 
   .imgLaptop {
-    width: 38.4rem;
-    height: auto;
-    margin: 10rem 0rem;
+    position: absolute;
+    right: -150px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 60rem;
+    pointer-events: none;
   }
 
   .chooseUs {
@@ -810,6 +833,7 @@
   .starts {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     padding: 0 6rem;
   }
 
@@ -839,6 +863,10 @@
     overflow: hidden;
     width: 34rem;
     height: auto;
+  }
+
+  .newCardImg {
+    width: -webkit-fill-available;
   }
 
   .userTexts {

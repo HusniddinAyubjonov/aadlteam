@@ -20,14 +20,16 @@ export default function Home() {
   return (
     <div>
       <section className={style.container}>
-        <h1 className={style.headTitle}>
-          A leading web-studio to take your business to the next level
-        </h1>
-        <p className={style.headDescription}>
-          We create modern, user-friendly websites optimized for all devices.
-          Our solutions suit any purpose — from personal projects to large-scale
-          platforms.
-        </p>
+        <div className={style.head}>
+          <h1 className={style.headTitle}>
+            A leading web-studio to take your business to the next level
+          </h1>
+          <p className={style.headDescription}>
+            We create modern, user-friendly websites optimized for all devices.
+            Our solutions suit any purpose — from personal projects to
+            large-scale platforms.
+          </p>
+        </div>
       </section>
 
       {/*---------------------------------------------------------------------------
@@ -208,16 +210,12 @@ export default function Home() {
       <div className={style.news}>
         <span className={style.newTexts}>
           <h1 className={style.newsTitle}>Browse our latest news</h1>
-          <p className={style.newsDescription}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit non
-            neque orci amet, amet .
-          </p>
         </span>
 
         <div className={style.newCards}>
           {newData.map((info, index) => (
             <div key={index} className={style.newCard}>
-              <img src={info.img} alt="image" />
+              <img className={style.newCardImg} src={info.img} alt="image" />
               <button className={style.newCardBtn}>{info.btnText}</button>
               <h3 className={style.newCardTitle}>{info.title}</h3>
               <p className={style.newCardDescription}>{info.description}</p>
@@ -238,7 +236,6 @@ export default function Home() {
         </div>
         <button className={style.newsMoreBtn}>View All Articles</button>
       </div>
-
     </div>
   );
 }
