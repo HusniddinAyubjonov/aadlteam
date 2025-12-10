@@ -22,9 +22,7 @@
   font-style: Regular;
   font-size: 1.8rem;
   line-height: 3.2rem;
-  letter-spacing: 0%;
   text-align: center;
-  vertical-align: middle;
   width: 50%;
   margin: 0 auto;
 }
@@ -48,22 +46,14 @@
   color: #ffffff;
   padding: 1rem 1.4rem;
   font-weight: 500;
-  font-style: Medium;
   font-size: 1.4rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.7px;
-  vertical-align: middle;
   text-transform: uppercase;
 }
 
 .pricingCard h1 {
   font-weight: 700;
-  font-style: Bold;
   font-size: 4.2rem;
   line-height: 5.5rem;
-  letter-spacing: 0px;
-  vertical-align: middle;
-  text-align: start;
   margin-top: 1.6rem;
 }
 
@@ -71,38 +61,22 @@
   width: 32.1rem;
   margin-top: 1.6rem;
   text-align: start;
-  font-weight: 400;
-  font-style: Regular;
   font-size: 1.8rem;
   line-height: 3.2rem;
-  letter-spacing: 0%;
-  vertical-align: middle;
-}
-
-.listFeature {
-  margin-top: 1.6rem;
 }
 
 .pricingCard ul p {
   font-weight: 700;
-  font-style: Bold;
   font-size: 1.8rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.9px;
-  vertical-align: middle;
   text-transform: uppercase;
 }
 
 .listFeature {
   list-style: disc;
   margin-left: 1.4rem;
+  margin-top: 1.6rem;
   margin-bottom: 1.6rem;
-  font-weight: 400;
-  font-style: Regular;
   font-size: 1.8rem;
-  line-height: 2rem;
-  letter-spacing: 0%;
-  vertical-align: middle;
 }
 
 .listFeature::marker {
@@ -111,27 +85,64 @@
 
 .btnNextPage {
   width: 100%;
-  padding-top: 2.8rem;
-  padding-bottom: 2.8rem;
+  padding: 2.8rem 0;
   background-color: #88b702;
   border-radius: 8rem;
   margin-top: 3.8rem;
   font-weight: 700;
-  font-style: Bold;
   font-size: 1.6rem;
-  line-height: 1.6rem;
-  letter-spacing: 1.6px;
-  text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
-  transition: 0.1s ease;
 }
 
 .btnNextPage:hover {
   background-color: #6fa001;
-  transition: 0.1s ease;
+}
+
+.pricingCardsWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.pricingDots {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .pricingCards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 2.6rem;
+    padding-bottom: 2rem;
+  }
+
+  .pricingCard {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .pricingDots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+  }
+
+  .pricingDots span {
+    width: 12px;
+    height: 12px;
+    background: #444;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  .pricingDots :global(.active) {
+    background: #88b702 !important;
+    transform: scale(1.2);
+  }
 }
 
 @media (min-width: 940px) and (max-width: 1280px) {
@@ -160,19 +171,15 @@
 
   .pricingDescription {
     font-size: 1.6rem;
-    line-height: 2.6rem;
     width: 70%;
   }
 
   .pricingCard {
     padding: 3rem 2rem;
-    background-color: #1e1e1e;
-    border-radius: 4rem;
   }
 
   .pricingCard h1 {
     font-size: 3.4rem;
-    line-height: 4.2rem;
   }
 
   .pricingCard p {
@@ -180,13 +187,7 @@
   }
 
   .btnNextPage {
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .pricingCards {
-    gap: 1.6rem;
+    padding: 2rem 0;
   }
 }
 
@@ -197,41 +198,20 @@
 
   .pricingTitle {
     font-size: 3.8rem;
-    line-height: 4.6rem;
     text-align: start;
   }
 
   .pricingDescription {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
     width: 100%;
     text-align: start;
-    margin: 0;
   }
 
   .pricingCard {
     padding: 4.8rem 3rem;
-    background-color: #1e1e1e;
-    border-radius: 4rem;
-  }
-
-  .pricingCard h1 {
-    font-size: 3.4rem;
-    line-height: 4.2rem;
   }
 
   .pricingCard p {
     width: 28.1rem;
-  }
-
-  .btnNextPage {
-    width: 100%;
-    padding-top: 2.6rem;
-    padding-bottom: 2.6rem;
-  }
-
-  .pricingCards {
-    gap: 1.6rem;
   }
 }
 
@@ -240,42 +220,39 @@
     padding: 0 2rem;
   }
 
+  .pricingCard {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
   .pricingTitle {
     font-size: 3.8rem;
-    line-height: 4.6rem;
     text-align: start;
   }
 
   .pricingDescription {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
     width: 100%;
     text-align: start;
-    margin: 0;
   }
 
   .pricingCard {
     padding: 4.8rem 3rem;
-    background-color: #1e1e1e;
-    border-radius: 4rem;
-  }
-
-  .pricingCard h1 {
-    font-size: 3.4rem;
-    line-height: 4.2rem;
   }
 
   .pricingCard p {
-    width: 100%;
+    width: 90%;
   }
 
   .btnNextPage {
     width: 100%;
-    padding-top: 2.6rem;
-    padding-bottom: 2.6rem;
-  }
-
-  .pricingCards {
-    gap: 1.6rem;
+    padding: 2.8rem 0;
+    background-color: #88b702;
+    border-radius: 8rem;
+    margin-top: 3.8rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
   }
 }
