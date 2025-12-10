@@ -146,9 +146,14 @@
 --------------------------------------------------------------------------- */
 
 .advantages {
-  padding: 21.5rem 17.2rem;
+  padding: 21.5rem 12.6rem;
   display: flex;
   justify-content: space-between;
+}
+
+.advantagesImg {
+  width: 50rem;
+  height: auto;
 }
 
 .advantagesText {
@@ -190,7 +195,7 @@
   align-items: center;
 }
 
-.advantagesIcons {
+.advantagesIcon {
   width: 3rem;
   height: 3rem;
 }
@@ -215,6 +220,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .imgLaptop {
@@ -347,7 +353,6 @@
 
 .reviewTitle {
   font-weight: 700;
-  font-style: Bold;
   font-size: 4.2rem;
   line-height: 5.5rem;
   margin-bottom: 4rem;
@@ -362,28 +367,32 @@
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.6rem;
-  letter-spacing: 1.6px;
   text-align: center;
   color: #ffffff;
   display: none;
 }
 
+.sliderWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviewCards {
+  display: flex;
+  flex-wrap: nowrap; /* фикс — запрещаем wrap */
+  gap: 26px;
+  transition: transform 0.5s ease-out;
+}
+
 .reviewCard {
-  width: 48.5%;
+  flex: 0 0 calc(50% - 13px); /* 2 карточки в ряд */
   background: #1e1e1e;
   border-radius: 40px;
   padding: 65px 50px;
 }
 
-.reviewCards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
-}
-
 .cardFeeback {
-  font-weight: 400;
-  font-style: Regular;
   font-size: 1.8rem;
   line-height: 3.2rem;
 }
@@ -402,23 +411,37 @@
 }
 
 .userFullName {
-  font-weight: 700;
-  font-style: Bold;
   font-size: 1.6rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.8px;
-  vertical-align: middle;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .userRole {
-  font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.8px;
-  vertical-align: middle;
   text-transform: uppercase;
   margin-top: 6px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.dots span {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #444;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.activeDot {
+  background: #fff !important;
+  transform: scale(1.2);
 }
 
 /*---------------------------------------------------------------------------
@@ -595,21 +618,6 @@
   letter-spacing: 0.8px;
   vertical-align: middle;
   text-transform: uppercase;
-}
-
-.newsMoreBtn {
-  padding: 2.7rem 3.2rem;
-  border-radius: 8rem;
-  color: #fff;
-  background-color: #1e1e1e;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  letter-spacing: 1.6px;
-  text-align: center;
-  margin-top: 4rem;
-  margin-left: 40%;
 }
 
 @media (min-width: 1440px) {
@@ -821,9 +829,11 @@
   }
 
   .reviewCards {
-    display: flex;
-    flex-wrap: nowrap;
     gap: 16px;
+  }
+
+  .reviewCard {
+    flex: 0 0 calc(50% - 8px); /* 2 карточки */
   }
 
   /*---------------------------------------------------------------------------
@@ -859,10 +869,17 @@
     font-size: 1.6rem;
   }
 
+  .newCards {
+    flex-wrap: nowrap; /* ряд */
+    overflow-x: auto; /* скролл рукой */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+  }
+
   .newCard {
-    overflow: hidden;
-    width: 34rem;
-    height: auto;
+    flex: 0 0 auto; /* ширина карточки */
+    scroll-snap-align: start; /* фиксация */
   }
 
   .newCardImg {
@@ -915,53 +932,49 @@
   }
 
   .content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 2fr;
     gap: 2rem;
   }
 
   .card {
-    width: 35.8rem;
+    width: 33rem;
     margin: 0 auto;
   }
 
   .bigCard {
-    grid-column: auto;
-    grid-row: auto;
+    grid-column: 1;
+    grid-row: 3;
+    width: 35rem;
+    height: 62rem;
   }
 
   .card .cardTitle,
   .bigCard .cardTitle {
-    font-size: 18px;
-    margin-top: 10px;
-    width: 300px;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    width: 30rem;
   }
 
   .card .cardDescription,
   .bigCard .cardDescription {
-    font-size: 16px;
-    width: 30rem;
+    font-size: 1.6rem;
+    width: 98%;
     text-align: start;
     margin: 0;
   }
-
-  .bigCard {
-    width: 358px;
-    height: 622px;
-  }
-
   .icons {
-    width: 68px;
-    height: 68px;
+    width: 6.8rem;
+    height: 6.8rem;
     background: #88b702;
-    border-radius: 20px;
+    border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .icon {
-    width: 42px;
-    height: 34px;
+    width: 4.2rem;
+    height: 3.4rem;
   }
 
   .bigCard .icons .icon {
@@ -979,12 +992,12 @@
   .advantages {
     padding: 0 6rem;
     margin-top: 0;
-    flex-direction: column;
+    align-items: flex-end;
   }
 
   .advantagesImg {
     width: 30rem;
-    margin: 0 auto;
+    height: fit-content;
   }
 
   .advantagesText {
@@ -1027,17 +1040,23 @@
 
   .chooseUsTexts {
     padding: 0 4rem;
+    overflow: hidden;
   }
 
   .section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    overflow: hidden;
   }
 
   .imgLaptop {
-    padding-top: 2rem;
-    height: 40rem;
+    position: absolute;
+    right: -250px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 60rem;
+    pointer-events: none;
   }
 
   .chooseUs {
@@ -1049,21 +1068,18 @@
   .chooseUsText {
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 
   .chooseUsTitle {
     font-size: 3.2rem;
     line-height: 3.6rem;
-    text-align: center;
   }
 
   .chooseUsDescription {
-    text-align: center;
     font-size: 1.6rem;
     line-height: 2.6rem;
     width: 33rem;
-    margin: 1.6rem auto;
+    margin: 1.6rem 0;
   }
 
   .chooseUsInfoTitle {
@@ -1101,28 +1117,29 @@
 --------------------------------------------------------------------------- */
 
   .review {
-    padding: 8rem 4rem;
+    padding: 12rem 4rem;
+  }
+
+  .reviewCard {
+    padding: 45px 32px;
+    flex: 0 0 calc(50% - 16px);
+    inset: 0;
+    background: radial-gradient(
+      circle,
+      rgba(80, 120, 20, 0.4),
+      rgba(0, 0, 0, 1)
+    );
+  }
+
+  .cardFeeback {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
   }
 
   .reviewTitle {
     font-size: 3.6rem;
     line-height: 5.5rem;
     margin-bottom: 4rem;
-  }
-
-  .reviewCard {
-    width: 48%;
-    padding: 40px 30px;
-  }
-
-  .reviewCards {
-    flex-wrap: nowrap;
-    gap: 16px;
-  }
-
-  .cardFeeback {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
   }
 
   .userAvatar {
@@ -1157,6 +1174,11 @@
     margin-top: 2.6rem;
   }
 
+  .startsInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+
   /*---------------------------------------------------------------------------
       /// News
 --------------------------------------------------------------------------- */
@@ -1165,9 +1187,13 @@
     padding: 10rem 4rem;
   }
 
+  .newCardImg {
+    width: -webkit-fill-available;
+  }
+
   .newTexts {
     flex-direction: column;
-    text-align: center;
+    text-align: start;
     gap: 2rem;
   }
 
@@ -1176,13 +1202,16 @@
   }
 
   .newCards {
-    justify-content: center;
+    flex-wrap: nowrap; /* ряд */
+    overflow-x: auto; /* скролл рукой */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
   }
 
   .newCard {
-    overflow: hidden;
-    width: 32rem;
-    height: auto;
+    flex: 0 0 auto; /* ширина карточки */
+    scroll-snap-align: start; /* фиксация */
   }
 
   .userTexts {
@@ -1221,31 +1250,35 @@
   }
 
   .projectTitle {
+    margin-top: 2rem;
     text-align: start;
-    font-size: 2.8rem;
-    line-height: 3.6rem;
+    font-size: 3.8rem;
+    line-height: 5rem;
   }
 
   .projectDescription {
-    text-align: start;
     padding: 0;
+    font-size: 2rem;
+    text-align: start;
     width: 100%;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
   }
 
   .content {
+    text-align: start;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   .card {
-    width: 35rem;
+    width: 35.8rem;
+    margin: 0 auto;
   }
 
   .bigCard {
-    grid-column: auto;
-    grid-row: auto;
+    grid-column: 1;
+    grid-row: 3;
+    width: 35.8rem;
+    height: 62rem;
   }
 
   .card .cardTitle,
@@ -1258,21 +1291,16 @@
   .card .cardDescription,
   .bigCard .cardDescription {
     font-size: 1.6rem;
-    width: 30rem;
+    width: 90%;
     text-align: start;
     margin: 0;
-  }
-
-  .bigCard {
-    width: 35rem;
-    height: 62.2rem;
   }
 
   .icons {
     width: 6.8rem;
     height: 6.8rem;
     background: #88b702;
-    border-radius: 20px;
+    border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1299,6 +1327,7 @@
     padding: 0 2.4rem;
     margin-top: 0;
     flex-direction: column;
+    align-items: center;
   }
 
   .advantagesImg {
@@ -1341,18 +1370,23 @@
   .chooseUsTexts {
     margin-top: 0;
     padding: 0 2.4rem;
+    margin-bottom: 50rem;
   }
 
   .section {
     width: 100%;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
   }
 
   .imgLaptop {
-    padding-top: 2rem;
-    width: 34rem;
-    height: auto;
+    position: absolute;
+    display: flex;
+    left: 2.4rem;
+    top: 50rem;
+    transform: translateY(0);
+    width: 90%;
+    pointer-events: none;
   }
 
   .chooseUs {
@@ -1392,6 +1426,7 @@
   .buildFeature {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
   }
 
   .buildFeatureTitle {
@@ -1417,7 +1452,7 @@
 
   .buildFeatureImg {
     margin-top: 0;
-    width: 100%;
+    width: 30rem;
     height: auto;
   }
 
@@ -1426,59 +1461,24 @@
 --------------------------------------------------------------------------- */
 
   .review {
-    padding: 6rem 2.4rem;
-  }
-
-  .reviewTitle {
-    font-size: 2.8rem;
-    line-height: 3.6rem;
-    margin-bottom: 4rem;
-  }
-
-  .reviewBtn {
-    width: 100%;
-    display: block;
-    margin-bottom: 1.6rem;
+    padding: 6rem 2rem;
   }
 
   .reviewCard {
-    width: 100%;
-    padding: 65px 50px;
-  }
-
-  .reviewCards {
-    gap: 16px;
-  }
-
-  .cardFeeback {
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 1.8rem;
-    line-height: 3.2rem;
-  }
-
-  .user {
-    display: flex;
-    align-items: center;
-    margin-top: 2.4rem;
-    gap: 2.2rem;
+    padding: 32px 24px;
+    flex: 0 0 100%;
+    height: auto;
   }
 
   .userAvatar {
-    width: 5.8rem;
-    height: 5.8rem;
-    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
   }
 
-  .userFullName {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-  }
-
-  .userRole {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-    margin-top: 6px;
+  .cardFeeback {
+    width: 90%;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 
   /*---------------------------------------------------------------------------
@@ -1517,6 +1517,7 @@
     font-size: 1.6rem;
     line-height: 2.6rem;
   }
+
   .starts .video {
     margin-top: 4rem;
   }
@@ -1527,11 +1528,6 @@
 
   .news {
     padding: 8rem 2.4rem;
-  }
-
-  .newTexts {
-    flex-direction: column;
-    align-items: start;
   }
 
   .newsTitle {
@@ -1545,24 +1541,36 @@
     font-size: 1.6rem;
   }
 
-  .newCards {
-    justify-content: start;
-  }
-
-  .newCard {
-    overflow: hidden;
-    width: 35.8rem;
-    height: auto;
-  }
-
   .userTexts {
     margin-top: 1rem;
     margin-bottom: 3rem;
   }
 
-  .newsMoreBtn {
-    margin-left: 0;
-    width: 100%;
+  .newCardImg {
+    width: -webkit-fill-available;
+  }
+
+  .newTexts {
+    flex-direction: column;
+    text-align: start;
+    gap: 2rem;
+  }
+
+  .newsDescription {
+    width: 80%;
+  }
+
+  .newCards {
+    flex-wrap: nowrap; /* ряд */
+    overflow-x: auto; /* скролл рукой */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+  }
+
+  .newCard {
+    flex: 0 0 auto; /* ширина карточки */
+    scroll-snap-align: start; /* фиксация */
   }
 }
 
@@ -1617,7 +1625,6 @@
 
   .card {
     width: 27rem;
-    margin: 0 auto;
   }
 
   .bigCard {
@@ -1629,7 +1636,7 @@
   .bigCard .cardTitle {
     font-size: 1.8rem;
     margin-top: 1rem;
-    width: 24rem;
+    width: 90%;
   }
 
   .card .cardDescription,
@@ -1717,17 +1724,22 @@
 
   .chooseUsTexts {
     padding: 0 2rem;
+    margin-bottom: 28rem;
   }
 
   .section {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
   }
 
   .imgLaptop {
-    padding-top: 2rem;
-    width: 30rem;
-    height: auto;
+    position: absolute;
+    display: flex;
+    left: 2.4rem;
+    top: 60rem;
+    transform: translateY(0);
+    width: 90%;
+    pointer-events: none;
   }
 
   .chooseUs {
@@ -1799,59 +1811,24 @@
 --------------------------------------------------------------------------- */
 
   .review {
-    padding: 5rem 2rem;
-  }
-
-  .reviewTitle {
-    font-size: 2.8rem;
-    line-height: 3.6rem;
-    margin-bottom: 4rem;
-  }
-
-  .reviewBtn {
-    width: 100%;
-    display: block;
-    margin-bottom: 1.6rem;
+    padding: 6rem 2rem;
   }
 
   .reviewCard {
-    width: 100%;
-    padding: 40px 35px;
-  }
-
-  .reviewCards {
-    gap: 16px;
-  }
-
-  .cardFeeback {
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 1.6rem;
-    line-height: 3rem;
-  }
-
-  .user {
-    display: flex;
-    align-items: center;
-    margin-top: 2.4rem;
-    gap: 2.2rem;
+    padding: 32px 24px;
+    flex: 0 0 100%;
+    height: auto;
   }
 
   .userAvatar {
-    width: 5.8rem;
-    height: 5.8rem;
-    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
   }
 
-  .userFullName {
+  .cardFeeback {
+    width: 96%;
     font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
-
-  .userRole {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    margin-top: 4px;
+    line-height: 2.4rem;
   }
 
   /*---------------------------------------------------------------------------
@@ -1933,8 +1910,7 @@
     margin-bottom: 3rem;
   }
 
-  .newsMoreBtn {
-    margin-left: 0;
-    width: 100%;
+  .newCardDescription {
+    width: 86%;
   }
 }

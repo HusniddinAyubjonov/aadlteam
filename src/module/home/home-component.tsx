@@ -13,9 +13,52 @@ import img1 from "../../assets/imgs/our-advanture-img.png";
 import img2 from "../../assets/imgs/choose-us-img.png";
 import img3 from "../../assets/imgs/build-feauture.png";
 import img4 from "../../assets/imgs/video.png";
+import { useEffect } from "react";
 
 export default function Home() {
   // ---------------------------------------------------------------------------
+
+  useEffect(() => {
+    const track = document.getElementById("sliderTrack") as HTMLElement | null;
+    const dotsContainer = document.getElementById(
+      "reviewDots"
+    ) as HTMLElement | null;
+
+    if (!track || !dotsContainer) return;
+
+    const cards = Array.from(track.children) as HTMLElement[];
+    let currentSlide = 0;
+    const totalSlides = Math.ceil(cards.length / 1);
+
+    dotsContainer.innerHTML = "";
+
+    // создаём точки
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add(style.activeDot);
+      dot.addEventListener("click", () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = Array.from(dotsContainer.children);
+
+    function goToSlide(index: number) {
+      currentSlide = index;
+
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const gapValue = parseInt(getComputedStyle(track).gap) || 26;
+
+      const offset = (cardWidth + gapValue) * 1 * index;
+
+      track.style.transform = `translateX(-${offset}px)`;
+
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle(style.activeDot, idx === index);
+      });
+    }
+
+    goToSlide(0);
+  }, []);
 
   return (
     <div>
@@ -158,26 +201,31 @@ export default function Home() {
         <h1 className={style.reviewTitle}>What our users say?</h1>
         <button className={style.reviewBtn}>view all comments</button>
 
-        <div className={style.reviewCards}>
-          {reviewData.map((item, index) => (
-            <div className={style.reviewCard} key={index}>
-              <p className={style.cardFeeback}>{item.feedback}</p>
-              <div className={style.user}>
-                <img
-                  className={style.userAvatar}
-                  src={item.avatar}
-                  alt="avatar"
-                />
-                <div className={style.userInfo}>
-                  <h3 className={style.userFullName}>{item.fullName}</h3>
-                  <p className={style.userRole}>{item.role}</p>
+        <div className={style.sliderWrapper}>
+          <div className={style.reviewCards} id="sliderTrack">
+            {reviewData.map((item, index) => (
+              <div className={style.reviewCard} key={index}>
+                <p className={style.cardFeeback}>{item.feedback}</p>
+
+                <div className={style.user}>
+                  <img
+                    className={style.userAvatar}
+                    src={item.avatar}
+                    alt="avatar"
+                  />
+
+                  <div className={style.userInfo}>
+                    <h3 className={style.userFullName}>{item.fullName}</h3>
+                    <p className={style.userRole}>{item.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className={style.dots} id="reviewDots"></div>
         </div>
       </div>
-
       {/*---------------------------------------------------------------------------
       /// StartWithMe
       --------------------------------------------------------------------------- */}
@@ -189,7 +237,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
             nulla suspendisse tortor aene.
           </p>
-          <div>
+          <div className={style.startsInfo}>
             {startWithData.map((start, index) => (
               <div key={index} className={style.startInfo}>
                 <div className={style.icons}>
@@ -200,7 +248,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <img src={img4} alt="phone" className={style.video} />
+        <img src={img4} alt="video" className={style.video} />
       </div>
 
       {/*---------------------------------------------------------------------------
@@ -234,7 +282,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <button className={style.newsMoreBtn}>View All Articles</button>
       </div>
     </div>
   );

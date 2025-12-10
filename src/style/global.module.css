@@ -156,6 +156,7 @@ input {
 
 img {
   height: auto;
+  width: -webkit-fill-available;
 }
 
 [hidden] {
