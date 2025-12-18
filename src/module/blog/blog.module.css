@@ -126,7 +126,7 @@
 .postCards {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.6rem;
+  gap: 1.6rem;
 }
 
 .postCard {

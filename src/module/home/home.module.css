@@ -126,8 +126,8 @@
   position: absolute;
   width: 30rem;
   height: 40rem;
-  top: 28rem;
-  left: 4rem;
+  left: 8rem;
+  bottom: 0;
 }
 
 .bigCard .cardTitle {
@@ -528,15 +528,20 @@
 
 .newCards {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* ряд */
+  overflow-x: auto; /* скролл рукой */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   gap: 2.6rem;
 }
 
 .newCard {
-  width: 38.2rem;
+  /* width: 38.2rem; */
   height: 59rem;
   border-radius: 40px;
   background-color: #1e1e1e;
+  flex: 0 0 38.2rem;
+  scroll-snap-align: start; /* фиксация */
 }
 
 .newCardBtn {
@@ -623,6 +628,14 @@
 @media (min-width: 1440px) {
   .bigCard {
     width: auto;
+  }
+
+  .bigCard .icons .icon {
+    position: absolute;
+    width: 30rem;
+    height: 40rem;
+    left: 4rem;
+    bottom: 0;
   }
 }
 
@@ -878,7 +891,7 @@
   }
 
   .newCard {
-    flex: 0 0 auto; /* ширина карточки */
+    flex: 0 0 30rem; /* ширина карточки */
     scroll-snap-align: start; /* фиксация */
   }
 
@@ -932,7 +945,8 @@
   }
 
   .content {
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 30rem;
     gap: 2rem;
   }
 
@@ -942,8 +956,8 @@
   }
 
   .bigCard {
-    grid-column: 1;
-    grid-row: 3;
+    grid-column: 2;
+    grid-row: 2;
     width: 35rem;
     height: 62rem;
   }
@@ -1210,7 +1224,7 @@
   }
 
   .newCard {
-    flex: 0 0 auto; /* ширина карточки */
+    flex: 0 0 30rem; /* ширина карточки */
     scroll-snap-align: start; /* фиксация */
   }
 
@@ -1569,7 +1583,7 @@
   }
 
   .newCard {
-    flex: 0 0 auto; /* ширина карточки */
+    flex: 0 0 30rem; /* ширина карточки */
     scroll-snap-align: start; /* фиксация */
   }
 }
@@ -1901,7 +1915,7 @@
 
   .newCard {
     overflow: hidden;
-    width: 35.8rem;
+    width: 30rem;
     height: auto;
   }
 
