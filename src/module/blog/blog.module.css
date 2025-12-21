@@ -13,7 +13,6 @@
   font-size: 6.6rem;
   line-height: 8rem;
   letter-spacing: -1px;
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -104,7 +103,7 @@
 
 .postButton {
   color: #fff;
-  background-color: #1E1F1E;
+  background-color: #1e1f1e;
   padding: 0.8rem 2.4rem;
   border-radius: 1000px;
   font-weight: 400;
@@ -264,11 +263,17 @@
 --------------------------------------------------------------------------- */
   .head {
     display: none;
+    height: 0;
   }
 
   /*---------------------------------------------------------------------------
       /// Latest Posts
 --------------------------------------------------------------------------- */
+
+  .posts {
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+  }
 
   .postHead {
     flex-direction: column;
@@ -306,6 +311,7 @@
 
   .head {
     display: none;
+    height: 0;
   }
 
   /*---------------------------------------------------------------------------
@@ -365,6 +371,7 @@
 
   .head {
     display: none;
+    height: 0;
   }
 
   /*---------------------------------------------------------------------------
