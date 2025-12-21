@@ -1,10 +1,10 @@
 // BlogPage.jsx
 import { useState } from "react";
 import styles from "./blog.module.css";
-
-import img from "../../assets/imgs/news-img.png";
 import { postData } from "./constants";
 import { Link } from "react-router-dom";
+
+import img from "../../assets/imgs/news-img.png";
 
 export default function BlogPage() {
   const [filter, setFilter] = useState("All");

@@ -626,15 +626,11 @@
 }
 
 @media (min-width: 1440px) {
-  .bigCard {
-    width: auto;
-  }
-
   .bigCard .icons .icon {
     position: absolute;
-    width: 30rem;
+    width: 33.8rem;
     height: 40rem;
-    left: 4rem;
+    left: 7rem;
     bottom: 0;
   }
 }
@@ -958,7 +954,7 @@
   .bigCard {
     grid-column: 2;
     grid-row: 2;
-    width: 35rem;
+    width: 33rem;
     height: 62rem;
   }
 
@@ -972,7 +968,7 @@
   .card .cardDescription,
   .bigCard .cardDescription {
     font-size: 1.6rem;
-    width: 98%;
+    width: 90%;
     text-align: start;
     margin: 0;
   }
@@ -996,7 +992,7 @@
     width: 28.1rem;
     height: 50rem;
     top: 19.5rem;
-    left: 3.8rem;
+    left: 2.8rem;
   }
 
   /*---------------------------------------------------------------------------
