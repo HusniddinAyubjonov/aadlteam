@@ -267,7 +267,10 @@ export default function Home() {
               slidesPerView: 3,
             },
             1580: {
-              slidesPerView: 4.8,
+              slidesPerView: 3.8,
+            },
+            2000: {
+              slidesPerView: 4,
             },
           }}
           className={style.newCards}

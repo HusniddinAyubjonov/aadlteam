@@ -35,10 +35,10 @@ export default function PricingPage() {
               768: {
                 slidesPerView: 2,
               },
-              1024: {
+              1180: {
                 slidesPerView: 2,
               },
-              1080: {
+              1280: {
                 slidesPerView: 3,
               },
               1580: {

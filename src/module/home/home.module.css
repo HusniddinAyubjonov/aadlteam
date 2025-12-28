@@ -311,7 +311,7 @@
   font-size: 4.2rem;
   line-height: 5.5rem;
   vertical-align: middle;
-  width: 58.8rem;
+  width: 49rem;
 }
 
 .buildFeatureDescription {
@@ -438,6 +438,7 @@
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .activeDot {
@@ -623,22 +624,24 @@
 .newDots {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 32px;
+  gap: 1.2rem;
+  margin-top: 3rem;
 }
 
 .newDot {
-  width: 10px;
-  height: 10px;
+  width: 1.2rem;
+  height: 1.2rem;
   background-color: #555;
   border-radius: 50%;
   opacity: 1;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .newActiveDot {
   background-color: #88b702;
+  transform: scale(1.2);
 }
 
 @media (min-width: 1480px) {
