@@ -9,8 +9,12 @@
 .head::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(80, 120, 20, 0.4), rgba(0, 0, 0, 1));
+  inset: 1;
+  background: radial-gradient(
+    ellipse 30% 10%,
+    rgba(80, 120, 20, 0.4),
+    rgba(0, 0, 0, 0)
+  );
   z-index: -1;
 }
 
@@ -1724,7 +1728,8 @@
     width: 22rem;
     height: 30rem;
     top: 22rem;
-    left: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /*---------------------------------------------------------------------------
@@ -1965,5 +1970,9 @@
 
   .newCardDescription {
     width: 86%;
+  }
+
+  .video {
+    width: 100%;
   }
 }

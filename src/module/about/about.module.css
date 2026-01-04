@@ -710,7 +710,7 @@
 
   .worldImg {
     width: 100%;
-    height: fit-content;
+    height: auto;
   }
 
   .infoBox {

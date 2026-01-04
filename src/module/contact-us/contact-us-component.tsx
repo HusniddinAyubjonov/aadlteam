@@ -3,8 +3,6 @@ import { contactData, faqData } from "./constants";
 import styles from "./contact-us.module.css";
 
 export default function ContactUsPage() {
-  // ---------------------------------------------------------------------------
-
   const [open, setOpen] = useState<number | null>(null);
 
   const toggle = (index: number) => {
@@ -15,6 +13,7 @@ export default function ContactUsPage() {
     <>
       <section className={styles.container}>
         <h1 className={styles.formTitle}>Get in touch</h1>
+
         <div className={styles.formBox}>
           <form className={styles.form}>
             <div className={styles.field}>
@@ -51,12 +50,14 @@ export default function ContactUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui
               pharetra elementum sit id sagittis non donec egestas.
             </p>
+
             <div className={styles.emails}>
               {contactData.map((item, index) => (
                 <div key={index} className={styles.email}>
                   <div className={styles.icons}>
                     <img className={styles.icon} src={item.img} alt="icon" />
                   </div>
+
                   <a
                     className={styles.links}
                     href={`mailto:${item.email}?subject=Hello&body=Write your message here`}
@@ -70,27 +71,29 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      {/*---------------------------------------------------------------------------
-      /// FAQ
-      --------------------------------------------------------------------------- */}
-
-      <div className={styles.faqContainer}>
+      {/* FAQ */}
+      <section className={styles.faqContainer}>
         <h2 className={styles.faqTitle}>FAQ</h2>
 
         {faqData.map((item, index) => (
           <div key={index} className={styles.item}>
             <div className={styles.question} onClick={() => toggle(index)}>
               <span>{item.question}</span>
-
-              <span className={styles.faqIcon}>{open === index ? "-" : "+"}</span>
+              <span className={styles.faqIcon}>
+                {open === index ? "−" : "+"}
+              </span>
             </div>
 
-            {open === index && (
-              <div className={styles.answer}>{item.answer}</div>
-            )}
+            <div
+              className={`${styles.answer} ${
+                open === index ? styles.open : ""
+              }`}
+            >
+              {item.answer}
+            </div>
           </div>
         ))}
-      </div>
+      </section>
     </>
   );
 }

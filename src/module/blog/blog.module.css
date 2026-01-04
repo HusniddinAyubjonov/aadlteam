@@ -318,7 +318,9 @@
   .postHead {
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
+    text-align: start;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .postBtns {
@@ -333,6 +335,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
   }
 
   .postCard {
@@ -388,7 +391,7 @@
   .postHead {
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
+    text-align: start;
   }
 
   .postBtns {
@@ -400,6 +403,7 @@
 
   .postCard {
     width: 28rem;
+    margin-top: 2rem;
   }
 
   .postCardTitle {
