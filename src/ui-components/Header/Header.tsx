@@ -1,10 +1,10 @@
 import { useState } from "react";
-import style from "./Navbar.module.css";
+import style from "./Header.module.css";
 import logo from "/public/logo.svg";
 import menuIcon from "../../assets/icon/menu-icon.svg";
 import { Link } from "react-router-dom";
 
-export function Navbar() {
+export function Header() {
   // ---------------------------------------------------------------------------
 
   const [isOpen, setIsOpen] = useState(false);

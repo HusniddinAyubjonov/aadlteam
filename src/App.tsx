@@ -2,7 +2,7 @@ import  "./style/global.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./scroll-to-top.component";
-import { Navbar } from "./ui-components/Navbar/Navbar";
+import { Header } from "./ui-components/Header/Header";
 import { Footer } from "./ui-components/Footer/Footer";
 
 const Home = lazy(() => import("./module/home/home-component"));
@@ -34,7 +34,7 @@ function App() {
           </h1>
         }
       >
-        <Navbar />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />

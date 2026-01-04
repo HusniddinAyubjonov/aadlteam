@@ -1,5 +1,13 @@
 .container {
+  position: relative;
   padding: 17rem 21rem;
+  background: radial-gradient(
+      ellipse 80vw 60vh at 50% 34vh,
+      rgba(90, 140, 30, 0.45),
+      rgba(0, 0, 0, 0) 65%
+    ),
+    #000;
+  overflow: hidden;
 }
 
 .headTitle {
@@ -254,9 +262,31 @@
   }
 }
 
+@media (min-width: 1480px) {
+  .container {
+    position: relative;
+    padding: 17rem 21rem;
+    background: radial-gradient(
+        ellipse 50vw 22vh at 50% 12vh,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+    overflow: hidden;
+  }
+}
+
 @media (min-width: 940px) and (max-width: 1280px) {
   .container {
+    position: relative;
     padding: 10rem 6rem;
+    background: radial-gradient(
+        ellipse 80vw 50vh at 50% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+    overflow: hidden;
   }
 
   .headTitle {
@@ -497,6 +527,7 @@
 @media (min-width: 390px) and (max-width: 768px) {
   .container {
     padding: 0 2.4rem;
+    background: none;
   }
 
   .headTitle {
@@ -626,6 +657,7 @@
 @media (min-width: 320px) and (max-width: 390px) {
   .container {
     padding: 0 2rem;
+    background: none;
   }
 
   .headTitle {

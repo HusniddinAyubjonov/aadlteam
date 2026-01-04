@@ -1,21 +1,18 @@
 .container {
+  position: relative;
   padding: 17rem 21rem;
+  background: radial-gradient(
+      ellipse 80vw 60vh at 50% 34vh,
+      rgba(90, 140, 30, 0.45),
+      rgba(0, 0, 0, 0) 65%
+    ),
+    #000;
+  overflow: hidden;
 }
 
 .head {
+  position: relative;
   z-index: 1;
-}
-
-.head::before {
-  content: "";
-  position: absolute;
-  inset: 1;
-  background: radial-gradient(
-    ellipse 30% 10%,
-    rgba(80, 120, 20, 0.4),
-    rgba(0, 0, 0, 0)
-  );
-  z-index: -1;
 }
 
 .headTitle {
@@ -149,15 +146,31 @@
       /// Our advantages
 --------------------------------------------------------------------------- */
 
+.section1 {
+  position: relative;
+  background: radial-gradient(
+      ellipse 100vw 100vh at 40% 50%,
+      rgba(90, 140, 30, 0.45),
+      rgba(0, 0, 0, 0) 65%
+    ),
+    #000;
+}
+
 .advantages {
+  position: relative;
+  z-index: 1;
   padding: 21.5rem 12.6rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 10rem;
 }
 
 .advantagesImg {
   width: 50rem;
   height: auto;
+  position: relative;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
 }
 
 .advantagesText {
@@ -650,7 +663,20 @@
 
 @media (min-width: 1480px) {
   .container {
-    padding: 17rem 0rem;
+    position: relative;
+    padding: 17rem 21rem;
+    background: radial-gradient(
+        ellipse 50vw 22vh at 50% 12vh,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+    overflow: hidden;
+  }
+
+  .head {
+    position: relative;
+    z-index: 1;
   }
 
   .projectDescription {
@@ -696,11 +722,51 @@
   .newCard {
     height: auto;
   }
+
+  .section1 {
+    position: relative;
+    background: radial-gradient(
+        ellipse 80vw 50vh at 20% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+  }
+
+  .advantages {
+    position: relative;
+    z-index: 1;
+    padding: 21.5rem 12.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+
+  .advantagesImg {
+    width: 50rem;
+    height: auto;
+    position: relative;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
+  }
 }
 
 @media (min-width: 940px) and (max-width: 1280px) {
   .container {
+    position: relative;
     padding: 10rem 6rem;
+    background: radial-gradient(
+        ellipse 80vw 50vh at 50% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+    overflow: hidden;
+  }
+
+  .head {
+    position: relative;
+    z-index: 1;
   }
 
   .headTitle {
@@ -786,10 +852,31 @@
       /// Our advantages
 --------------------------------------------------------------------------- */
 
+  .section1 {
+    position: relative;
+    background: radial-gradient(
+        ellipse 100vw 90vh at 30% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+  }
+
   .advantages {
+    position: relative;
+    z-index: 1;
     padding: 14rem 6rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 0;
+  }
+
+  .advantagesImg {
+    width: 50rem;
+    height: auto;
+    position: relative;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
   }
 
   .advantagesTitle {
@@ -1057,10 +1144,31 @@
       /// Our advantages
 --------------------------------------------------------------------------- */
 
+  .section1 {
+    position: relative;
+    background: radial-gradient(
+        ellipse 80vw 62vh at 30% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
+  }
+
   .advantages {
+    position: relative;
+    z-index: 1;
     padding: 0 6rem;
     margin-top: 0;
     align-items: flex-end;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .advantagesImg {
+    width: 50rem;
+    height: auto;
+    position: relative;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
   }
 
   .advantagesImg {
@@ -1073,14 +1181,14 @@
   }
 
   .advantagesTitle {
-    text-align: center;
+    text-align: start;
     font-size: 3.2rem;
     line-height: 3.6rem;
     margin-top: 2rem;
   }
 
   .advantagesDescription {
-    text-align: center;
+    text-align: start;
     font-size: 1.6rem;
     line-height: 2.6rem;
     width: 33rem;
@@ -1120,7 +1228,7 @@
 
   .imgLaptop {
     position: absolute;
-    right: -250px;
+    right: -20rem;
     top: 70%;
     transform: translateY(-50%);
     width: 60rem;
@@ -1231,9 +1339,9 @@
   }
 
   .video {
-    width: 100%;
-    height: fit-content;
-    margin-top: 2.6rem;
+    width: 70%;
+    height: auto;
+    margin: 2.6rem 0;
   }
 
   .startsInfo {
@@ -1264,10 +1372,6 @@
   }
 
   .newCards {
-    flex-wrap: nowrap; /* ряд */
-    overflow-x: auto; /* скролл рукой */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     gap: 16px;
   }
 
@@ -1283,6 +1387,7 @@
 @media (min-width: 390px) and (max-width: 768px) {
   .container {
     padding: 0 2.4rem;
+    background: none;
   }
 
   .headTitle {
@@ -1383,6 +1488,10 @@
   /*---------------------------------------------------------------------------
       /// Our advantages
 --------------------------------------------------------------------------- */
+
+  .section1 {
+    background: none;
+  }
 
   .advantages {
     padding: 0 2.4rem;
@@ -1580,7 +1689,7 @@
   }
 
   .starts .video {
-    margin-top: 4rem;
+    margin-top: 2.4rem;
   }
 
   /*---------------------------------------------------------------------------
@@ -1633,6 +1742,7 @@
 @media (min-width: 320px) and (max-width: 390px) {
   .container {
     padding: 0 2.4rem;
+    background: none;
   }
 
   .headTitle {
@@ -1735,6 +1845,10 @@
   /*---------------------------------------------------------------------------
       /// Our Advantages
 --------------------------------------------------------------------------- */
+
+  .section1 {
+    background: none;
+  }
 
   .advantages {
     padding: 0 2.4rem;
@@ -1926,7 +2040,7 @@
     line-height: 2.6rem;
   }
   .starts .video {
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
   /*---------------------------------------------------------------------------

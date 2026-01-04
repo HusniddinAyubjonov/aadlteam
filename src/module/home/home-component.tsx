@@ -72,7 +72,7 @@ export default function Home() {
       /// Our Advantages
       --------------------------------------------------------------------------- */}
 
-      <section>
+      <section className={style.section1}>
         <div className={style.advantages}>
           <img className={style.advantagesImg} src={img1} alt="phone" />
           <div className={style.advantagesText}>
