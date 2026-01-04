@@ -180,6 +180,7 @@ footer {
   }
 
   .footerP1 {
+    align-items: center;
     flex-direction: column;
     gap: 2rem;
   }
@@ -190,6 +191,7 @@ footer {
   }
 
   .linksSec {
+    justify-content: space-between;
     gap: 4rem !important;
   }
 
@@ -214,6 +216,7 @@ footer {
   }
 
   .footerP1 {
+    align-items: center;
     flex-direction: column;
     gap: 2.4rem;
   }
@@ -224,7 +227,7 @@ footer {
   }
 
   .linksSec {
-    flex-direction: column;
+    justify-content: space-between;
     gap: 2rem;
   }
 

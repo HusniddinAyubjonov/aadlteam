@@ -1490,18 +1490,28 @@
 --------------------------------------------------------------------------- */
 
   .section1 {
-    background: none;
+    position: relative;
+    background: radial-gradient(
+        ellipse 100% 110vh at 50% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
   }
 
   .advantages {
     padding: 0 2.4rem;
     margin-top: 0;
+    position: relative;
+    z-index: 1;
     flex-direction: column;
     align-items: center;
   }
 
   .advantagesImg {
     width: 30rem;
+    position: relative;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
   }
 
   .advantagesText {
@@ -1638,6 +1648,7 @@
     padding: 32px 24px;
     flex: 0 0 100%;
     height: auto;
+    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
   }
 
   .userAvatar {
@@ -1847,18 +1858,29 @@
 --------------------------------------------------------------------------- */
 
   .section1 {
-    background: none;
+    position: relative;
+    background: radial-gradient(
+        ellipse 100% 120vh at 50% 50%,
+        rgba(90, 140, 30, 0.45),
+        rgba(0, 0, 0, 0) 65%
+      ),
+      #000;
   }
 
   .advantages {
     padding: 0 2.4rem;
     margin-top: 0;
+    position: relative;
+    z-index: 1;
     flex-direction: column;
+    align-items: center;
   }
 
   .advantagesImg {
     width: 26rem;
     margin: 0 auto;
+    position: relative;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
   }
 
   .advantagesText {
@@ -1990,6 +2012,7 @@
     padding: 32px 24px;
     flex: 0 0 100%;
     height: auto;
+    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
   }
 
   .userAvatar {
