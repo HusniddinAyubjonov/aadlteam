@@ -2,7 +2,7 @@ import { useState } from "react";
 import { contactData, faqData } from "./constants";
 import styles from "./contact-us.module.css";
 
-export default function ContactUsPage() {
+export function ContactUsPage() {
   const [open, setOpen] = useState<number | null>(null);
 
   const toggle = (index: number) => {

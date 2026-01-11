@@ -3,7 +3,7 @@ import { missionData, PrincipleList, skillsData } from "./constants";
 
 import img from "../../assets/imgs/planet.png";
 
-export default function About() {
+export function About() {
   // ---------------------------------------------------------------------------
   return (
     <div>

@@ -1,7 +1,7 @@
 import style from "./not-found.module.css";
 import { Link } from "react-router-dom";
 
-export default function NotFoundPage() {
+export function NotFoundPage() {
   // ---------------------------------------------------------------------------
 
   return (

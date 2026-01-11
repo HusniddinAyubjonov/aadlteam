@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import img from "../../assets/imgs/news-img.png";
 
-export default function BlogPage() {
+export function BlogPage() {
   const [filter, setFilter] = useState("All");
 
   const filteredPosts = postData.filter((post) => {

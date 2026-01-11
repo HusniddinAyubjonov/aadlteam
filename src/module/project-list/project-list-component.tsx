@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Projects } from "./project-list";
 import style from "./project-list.module.css";
 
-export default function ProjectsPage() {
+export function ProjectsPage() {
   return (
     <section className={style.container}>
       <div className={style.project}>

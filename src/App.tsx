@@ -1,19 +1,16 @@
-import  "./style/global.module.css";
+import "./style/global.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import ScrollToTop from "./scroll-to-top.component";
+import { Suspense } from "react";
+import { ScrollToTop } from "./scroll-to-top.component";
 import { Header } from "./ui-components/Header/Header";
 import { Footer } from "./ui-components/Footer/Footer";
-
-const Home = lazy(() => import("./module/home/home-component"));
-const About = lazy(() => import("./module/about/about-component"));
-const Pricing = lazy(() => import("./module/pricing/pricing-component"));
-const Blog = lazy(() => import("./module/blog/blog-component"));
-const ProjectList = lazy(
-  () => import("./module/project-list/project-list-component")
-);
-const ContactUs = lazy(() => import("./module/contact-us/contact-us-component"));
-const NotFound = lazy(() => import("./module/not-found/not-found"));
+import { Home } from "./module/home/home-component";
+import { About } from "./module/about/about-component";
+import { PricingPage } from "./module/pricing/pricing-component";
+import { BlogPage } from "./module/blog/blog-component";
+import { ProjectsPage } from "./module/project-list/project-list-component";
+import { ContactUsPage } from "./module/contact-us/contact-us-component";
+import { NotFoundPage } from "./module/not-found/not-found";
 
 function App() {
   // ---------------------------------------------------------------------------
@@ -38,11 +35,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Pricing" element={<Pricing />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/ProjectList" element={<ProjectList />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/Pricing" element={<PricingPage />} />
+          <Route path="/Blog" element={<BlogPage />} />
+          <Route path="/ProjectList" element={<ProjectsPage />} />
+          <Route path="/ContactUs" element={<ContactUsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </Suspense>

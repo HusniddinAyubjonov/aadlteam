@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import styles from "./pricing.module.css";
 import { pricingData } from "./price-list";
 
-export default function PricingPage() {
+export function PricingPage() {
   return (
     <section className={styles.container}>
       <div className={styles.pricing}>
