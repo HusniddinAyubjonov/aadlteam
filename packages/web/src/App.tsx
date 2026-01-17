@@ -1,16 +1,16 @@
-import "./style/global.module.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Suspense } from "react";
-import { ScrollToTop } from "./scroll-to-top.component";
-import { Header } from "./ui-components/Header/Header";
-import { Footer } from "./ui-components/Footer/Footer";
-import { Home } from "./module/home/home-component";
-import { About } from "./module/about/about-component";
-import { PricingPage } from "./module/pricing/pricing-component";
-import { BlogPage } from "./module/blog/blog-component";
-import { ProjectsPage } from "./module/project-list/project-list-component";
-import { ContactUsPage } from "./module/contact-us/contact-us-component";
-import { NotFoundPage } from "./module/not-found/not-found";
+import "./style/global.module.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Suspense } from "react"
+import { Home } from "./module/home/home-component"
+import { About } from "./module/about/about-component"
+import { PricingPage } from "./module/pricing/pricing-component"
+import { BlogPage } from "./module/blog/blog-component"
+import { ProjectsPage } from "./module/project-list/project-list-component"
+import { ContactUsPage } from "./module/contact-us/contact-us-component"
+import { NotFoundPage } from "./module/not-found/not-found"
+import { ScrollToTop } from "./scroll-to-top.component"
+import { Header } from "./ui-components/header/header"
+import { Footer } from "./ui-components/footer/footer"
 
 function App() {
   // ---------------------------------------------------------------------------
@@ -44,7 +44,7 @@ function App() {
         <Footer />
       </Suspense>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

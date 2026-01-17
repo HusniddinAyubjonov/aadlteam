@@ -1,4 +1,4 @@
-import style from "./Footer.module.css";
+import style from "./footer.module.css";
 import logo from "../../../public/logo.svg";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";

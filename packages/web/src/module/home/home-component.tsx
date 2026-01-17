@@ -4,7 +4,6 @@ import {
   advantagesData,
   chooseUsData,
   newData,
-  reviewData,
   servicesData,
   startWithData,
 } from "./constants";
@@ -15,6 +14,7 @@ import img3 from "../../assets/imgs/build-feauture.png";
 import img4 from "../../assets/imgs/video.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { ReviewSection } from "./section6/section-reviews.component";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -159,55 +159,7 @@ export function Home() {
       /// Reviews
       --------------------------------------------------------------------------- */}
 
-      <section className={style.review}>
-        <h1 className={style.reviewTitle}>What our users say?</h1>
-        <button className={style.reviewBtn}>view all comments</button>
-
-        <div className={style.sliderWrapper}>
-          <Swiper
-            modules={[Pagination]}
-            slidesPerView={2}
-            spaceBetween={26}
-            pagination={{
-              clickable: true,
-              el: `.${style.dots}`,
-              bulletClass: style.dot,
-              bulletActiveClass: style.activeDot,
-            }}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-            }}
-          >
-            {reviewData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className={style.reviewCard}>
-                  <p className={style.cardFeeback}>{item.feedback}</p>
-
-                  <div className={style.user}>
-                    <img
-                      className={style.userAvatar}
-                      src={item.avatar}
-                      alt="avatar"
-                    />
-
-                    <div className={style.userInfo}>
-                      <h3 className={style.userFullName}>{item.fullName}</h3>
-                      <p className={style.userRole}>{item.role}</p>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          <div className={style.dots}></div>
-        </div>
-      </section>
+      <ReviewSection/>
       {/*---------------------------------------------------------------------------
       /// StartWithMe
       --------------------------------------------------------------------------- */}

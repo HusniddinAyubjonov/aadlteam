@@ -1,7 +1,8 @@
 .container {
   position: relative;
   padding: 17rem 21rem;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       ellipse 80vw 60vh at 50% 34vh,
       rgba(90, 140, 30, 0.45),
       rgba(0, 0, 0, 0) 65%
@@ -148,7 +149,8 @@
 
 .section1 {
   position: relative;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       ellipse 100vw 100vh at 40% 50%,
       rgba(90, 140, 30, 0.45),
       rgba(0, 0, 0, 0) 65%
@@ -367,103 +369,6 @@
 }
 
 /*---------------------------------------------------------------------------
-      /// Reviews
---------------------------------------------------------------------------- */
-
-.review {
-  padding: 20.6rem 12.6rem;
-}
-
-.reviewTitle {
-  font-weight: 700;
-  font-size: 4.2rem;
-  line-height: 5.5rem;
-  margin-bottom: 4rem;
-}
-
-.reviewBtn {
-  background-color: #88b702;
-  margin-top: 2.2rem;
-  width: 35.8rem;
-  height: 7rem;
-  border-radius: 8rem;
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  text-align: center;
-  color: #ffffff;
-  display: none;
-}
-
-.sliderWrapper {
-  position: relative;
-  width: 100%;
-}
-
-/* Карточка */
-.reviewCard {
-  background: #1e1e1e;
-  border-radius: 40px;
-  padding: 65px 50px;
-  height: 100%;
-}
-
-.cardFeeback {
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-}
-
-/* User */
-.user {
-  display: flex;
-  align-items: center;
-  margin-top: 2.4rem;
-  gap: 2.2rem;
-}
-
-.userAvatar {
-  width: 5.8rem;
-  height: 5.8rem;
-  border-radius: 50%;
-}
-
-.userFullName {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.userRole {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  margin-top: 6px;
-}
-
-/* Pagination */
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.dot {
-  width: 1.2rem;
-  height: 1.2rem;
-  background: #444;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.activeDot {
-  background: #88b702;
-  transform: scale(1.2);
-}
-
-/*---------------------------------------------------------------------------
       /// StartWithMe
 --------------------------------------------------------------------------- */
 
@@ -665,7 +570,8 @@
   .container {
     position: relative;
     padding: 17rem 21rem;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 50vw 22vh at 50% 12vh,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -725,7 +631,8 @@
 
   .section1 {
     position: relative;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 80vw 50vh at 20% 50%,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -755,7 +662,8 @@
   .container {
     position: relative;
     padding: 10rem 6rem;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 80vw 50vh at 50% 50%,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -854,7 +762,8 @@
 
   .section1 {
     position: relative;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 100vw 90vh at 30% 50%,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -977,22 +886,6 @@
     font-size: 1.6rem;
     margin-top: 3.2rem;
     margin-bottom: 6rem;
-  }
-
-  /*---------------------------------------------------------------------------
-      /// Reviews
---------------------------------------------------------------------------- */
-
-  .review {
-    padding: 16rem 6rem;
-  }
-
-  .reviewCards {
-    gap: 16px;
-  }
-
-  .reviewCard {
-    flex: 0 0 calc(50% - 8px); /* 2 карточки */
   }
 
   /*---------------------------------------------------------------------------
@@ -1146,7 +1039,8 @@
 
   .section1 {
     position: relative;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 80vw 62vh at 30% 50%,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -1286,46 +1180,6 @@
   .buildFeatureImg {
     width: 30rem;
     margin-top: 16rem;
-  }
-
-  /*---------------------------------------------------------------------------
-      /// Reviews
---------------------------------------------------------------------------- */
-
-  .review {
-    padding: 12rem 4rem;
-  }
-
-  .reviewCard {
-    padding: 45px 32px;
-    flex: 0 0 calc(50% - 16px);
-  }
-
-  .cardFeeback {
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-  }
-
-  .reviewTitle {
-    font-size: 3.6rem;
-    line-height: 5.5rem;
-    margin-bottom: 4rem;
-  }
-
-  .userAvatar {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .userFullName {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  }
-
-  .userRole {
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    margin-top: 6px;
   }
 
   /*---------------------------------------------------------------------------
@@ -1491,7 +1345,8 @@
 
   .section1 {
     position: relative;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 100% 110vh at 50% 50%,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -1634,32 +1489,6 @@
     margin-top: 0;
     width: 30rem;
     height: auto;
-  }
-
-  /*---------------------------------------------------------------------------
-      /// Reviews
---------------------------------------------------------------------------- */
-
-  .review {
-    padding: 6rem 2rem;
-  }
-
-  .reviewCard {
-    padding: 32px 24px;
-    flex: 0 0 100%;
-    height: auto;
-    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
-  }
-
-  .userAvatar {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .cardFeeback {
-    width: 90%;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
   }
 
   /*---------------------------------------------------------------------------
@@ -1859,7 +1688,8 @@
 
   .section1 {
     position: relative;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         ellipse 100% 120vh at 50% 50%,
         rgba(90, 140, 30, 0.45),
         rgba(0, 0, 0, 0) 65%
@@ -1998,32 +1828,6 @@
 
   .buildFeatureBtn {
     width: 100%;
-  }
-
-  /*---------------------------------------------------------------------------
-      /// Reviews
---------------------------------------------------------------------------- */
-
-  .review {
-    padding: 6rem 2rem;
-  }
-
-  .reviewCard {
-    padding: 32px 24px;
-    flex: 0 0 100%;
-    height: auto;
-    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
-  }
-
-  .userAvatar {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .cardFeeback {
-    width: 96%;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
   }
 
   /*---------------------------------------------------------------------------

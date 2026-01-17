@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./Header.module.css";
+import style from "./header.module.css";
 import logo from "/public/logo.svg";
 import menuIcon from "../../assets/icon/menu-icon.svg";
 import { Link } from "react-router-dom";
