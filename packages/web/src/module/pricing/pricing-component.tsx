@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import styles from "./pricing.module.css"
 import { pricingData } from "./price-list"
 
-type PricingItem = {
+interface PricingItem {
   tariff: string
   price: string
   title: string
@@ -19,14 +19,13 @@ export function PricingPage() {
   const currentX = useRef<number>(0)
   const isDragging = useRef<boolean>(false)
 
-  /* ===== slidesPerView (SYNC WITH CSS) ===== */
   const getSlidesPerView = (): number => {
     const w = window.innerWidth
-    if (w < 576) return 1 // 320–576
-    if (w < 768) return 2 // 576–768
-    if (w < 1180) return 2.6 // 768–1180
-    if (w < 1580) return 3 // 1180–1580
-    return 4.8 // 1580+
+    if (w < 576) return 1
+    if (w < 768) return 2
+    if (w < 1180) return 2.6
+    if (w < 1580) return 3
+    return 4.8
   }
 
   const slidesPerView = getSlidesPerView()
@@ -65,7 +64,6 @@ export function PricingPage() {
     isDragging.current = false
   }
 
-  /* ===== RESET ON RESIZE ===== */
   useEffect(() => {
     const onResize = () => setIndex(0)
     window.addEventListener("resize", onResize)
@@ -111,7 +109,6 @@ export function PricingPage() {
             ))}
           </div>
 
-          {/* DOTS */}
           <div className={styles.pricingDots}>
             {Array.from({ length: dotsCount }).map((_, i) => (
               <span

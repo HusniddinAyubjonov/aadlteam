@@ -3,80 +3,85 @@
 }
 
 .project {
-  margin-top: 17rem;
-  margin-bottom: 11rem;
+  margin: 6rem 0 11rem;
 }
 
-.project span h1 {
+.projectTitle {
   font-weight: 700;
-  font-style: Bold;
   font-size: 6.6rem;
   line-height: 8rem;
-  letter-spacing: -1px;
-  vertical-align: middle;
+  margin-bottom: 6rem;
 }
 
-.cards {
-  margin-top: 4rem;
+.cardsWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease;
+  touch-action: pan-y;
+}
+
+.slide {
+  flex: 0 0 33.333%;
+  padding-right: 2.6rem;
+  box-sizing: border-box;
 }
 
 .card {
-  overflow: hidden;
-  height: 50rem;
+  background: #1e1e1e;
   border-radius: 4rem;
-  background-color: #1e1e1e;
+  overflow: hidden;
+  height: 100%;
 }
 
-.img {
-  height: 21.5rem;
+.card img {
+  width: 100%;
+  display: block;
 }
 
 .card button {
-  padding: 1rem 1.4rem;
-  border-radius: 1000px;
-  background-color: #88b702;
+  margin: -2.2rem 0 0 2.2rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 100rem;
+  background: #88b702;
   color: #fff;
-  font-weight: 500;
   font-size: 1.4rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.7px;
   text-transform: uppercase;
-  margin-left: 2.2rem;
-  margin-top: -2.2rem;
 }
 
 .card h3 {
-  margin-left: 2.2rem;
-  margin-top: 4rem;
-  font-weight: 700;
+  margin: 4rem 2.2rem 0;
   font-size: 2.2rem;
   line-height: 3.1rem;
 }
 
 .card p {
-  font-weight: 400;
+  margin: 3.2rem 2.2rem 4rem;
   font-size: 1.8rem;
   line-height: 3.2rem;
-  margin-left: 2.2rem;
-  margin-top: 1.6rem;
-  width: 90%;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .projectDots {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 3rem;
 }
 
 .projectDot {
   width: 1.2rem;
   height: 1.2rem;
-  cursor: pointer;
   background: #444;
   border-radius: 50%;
-  transition: 0.3s;
-  opacity: 1;
+  cursor: pointer;
 }
 
 .projectDotActive {
@@ -84,90 +89,19 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 1280px) {
-  .projectDots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width: 940px) and (max-width: 1280px) {
-  .container {
-    padding: 0 6rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 940px) {
-  .container {
-    padding: 0 4rem;
-  }
-
-  .project {
-    margin-top: 8rem;
-  }
-
-  .project span h1 {
-    font-size: 4rem;
-    line-height: 5rem;
-  }
-
-  .img {
-    height: 21.5rem;
-  }
-}
-
-@media (min-width: 390px) and (max-width: 768px) {
-  .container {
-    padding: 0 2.4rem;
-  }
-
-  .project {
-    margin-top: 6rem;
-  }
-
-  .project span h1 {
-    font-size: 3.8rem;
-    line-height: 4.6rem;
-    text-align: start;
-  }
-
-  .card {
-    height: 47.5rem;
-  }
-
-  .img {
-    height: 21.5rem;
-  }
-
-  .card h3 {
-    font-size: 1.8rem;
-  }
-
-  .card p {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    width: 88%;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 389px) {
+@media (max-width: 576px) {
   .container {
     padding: 0 2rem;
   }
 
-  .project span h1 {
-    font-size: 3.4rem;
-    line-height: 4rem;
+  .projectTitle {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
   }
 
-  .card {
-    height: 47.5rem;
-  }
-
-  .img {
-    height: 21.5rem;
+  .slide {
+    flex: 0 0 100%;
+    padding-right: 0;
   }
 
   .card h3 {
@@ -175,8 +109,44 @@
   }
 
   .card p {
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    width: 88%;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+  }
+}
+
+/* 📱 576–768 — 2 */
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    padding: 0 2.4rem;
+  }
+
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1180px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1180px) and (max-width: 1580px) {
+  .container {
+    padding: 0 6rem;
+  }
+
+  .slide {
+    flex: 0 0 33.333%;
+  }
+}
+
+@media (min-width: 1580px) {
+  .slide {
+    flex: 0 0 20.83%;
   }
 }
