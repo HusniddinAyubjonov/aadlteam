@@ -1,23 +1,24 @@
-import clsx from "clsx";
-import style from "./home.module.css";
+import clsx from "clsx"
+import style from "./home.module.css"
 import {
   advantagesData,
   chooseUsData,
   newData,
   servicesData,
   startWithData,
-} from "./constants";
+} from "./constants"
 
-import img1 from "../../assets/imgs/our-advanture-img.png";
-import img2 from "../../assets/imgs/choose-us-img.png";
-import img3 from "../../assets/imgs/build-feauture.png";
-import img4 from "../../assets/imgs/video.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import { ReviewSection } from "./section6/section-reviews.component";
+import img1 from "../../assets/imgs/our-advanture-img.png"
+import img2 from "../../assets/imgs/choose-us-img.png"
+import img3 from "../../assets/imgs/build-feauture.png"
+import img4 from "../../assets/imgs/video.png"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination } from "swiper/modules"
+import { ReviewSection } from "./section6/section-reviews.component"
 
-import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css"
+import "swiper/css/pagination"
+import { NewsSection } from "./section8/section-news.component"
 
 export function Home() {
   // ---------------------------------------------------------------------------
@@ -159,7 +160,7 @@ export function Home() {
       /// Reviews
       --------------------------------------------------------------------------- */}
 
-      <ReviewSection/>
+      <ReviewSection />
       {/*---------------------------------------------------------------------------
       /// StartWithMe
       --------------------------------------------------------------------------- */}
@@ -254,6 +255,8 @@ export function Home() {
 
         <div className={style.newDots}></div>
       </div>
+
+      <NewsSection />
     </div>
-  );
+  )
 }

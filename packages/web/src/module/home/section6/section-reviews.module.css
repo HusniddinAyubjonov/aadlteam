@@ -2,7 +2,6 @@
   padding: 20.6rem 12.6rem;
 }
 
-/* ====== TITLE ====== */
 .reviewTitle {
   font-weight: 700;
   font-size: 4.2rem;
@@ -10,7 +9,6 @@
   margin-bottom: 4rem;
 }
 
-/* ====== SLIDER ====== */
 .sliderWrapper {
   overflow: hidden;
   position: relative;
@@ -28,7 +26,6 @@
   box-sizing: border-box;
 }
 
-/* ====== CARD ====== */
 .reviewCard {
   background: #1e1e1e;
   border-radius: 4rem;
@@ -41,7 +38,6 @@
   line-height: 3.2rem;
 }
 
-/* ====== USER ====== */
 .user {
   display: flex;
   align-items: center;
@@ -67,7 +63,6 @@
   margin-top: 0.6rem;
 }
 
-/* ====== DOTS ====== */
 .dots {
   display: flex;
   justify-content: center;
