@@ -3,23 +3,32 @@
 }
 
 .pricing {
-  margin-top: 4rem;
-  margin-bottom: 11rem;
+  margin: 4rem 0 11rem;
 }
 
 .pricingTitle {
   font-weight: 700;
-  font-style: Bold;
   font-size: 6.6rem;
   line-height: 8rem;
-  letter-spacing: -1px;
   text-align: center;
-  vertical-align: middle;
+  margin-bottom: 2.2rem;
 }
 
-.pricingCards {
-  margin-top: 2rem;
-  gap: 2.6rem;
+.pricingCardsWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease;
+  touch-action: pan-y;
+}
+
+.slide {
+  flex: 0 0 33.333%;
+  padding-right: 2.6rem;
+  box-sizing: border-box;
 }
 
 .pricingCard {
@@ -28,42 +37,33 @@
   border-radius: 4rem;
 }
 
-.pricingCard .tariff {
-  border-radius: 1000px;
-  background-color: #88b702;
-  color: #ffffff;
+.tariff {
   padding: 1rem 1.4rem;
-  font-weight: 500;
+  border-radius: 100rem;
+  background-color: #88b702;
+  color: #fff;
   font-size: 1.4rem;
   text-transform: uppercase;
 }
 
 .pricingCard h1 {
-  font-weight: 700;
   font-size: 4.2rem;
-  line-height: 5.5rem;
   margin-top: 1.6rem;
 }
 
 .pricingCard p {
-  width: 32.1rem;
   margin-top: 1.6rem;
-  text-align: start;
   font-size: 1.8rem;
   line-height: 3.2rem;
 }
 
 .pricingCard ul p {
   font-weight: 700;
-  font-size: 1.8rem;
   text-transform: uppercase;
 }
 
 .listFeature {
-  list-style: disc;
-  margin-left: 1.4rem;
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0 1.6rem 1.4rem;
   font-size: 1.8rem;
 }
 
@@ -73,25 +73,14 @@
 
 .btnNextPage {
   width: 100%;
-  padding: 2.8rem 0;
-  background-color: #88b702;
-  border-radius: 8rem;
   margin-top: 3.8rem;
-  font-weight: 700;
+  padding: 2.8rem 0;
+  border-radius: 8rem;
+  background-color: #88b702;
+  color: #fff;
   font-size: 1.6rem;
   text-transform: uppercase;
-  color: #ffffff;
   cursor: pointer;
-}
-
-.btnNextPage:active {
-  background-color: #6fa001;
-  transition: 0.1s ease;
-}
-
-.pricingCardsWrapper {
-  width: 100%;
-  position: relative;
 }
 
 .pricingDots {
@@ -106,8 +95,6 @@
   height: 1.2rem;
   background: #444;
   border-radius: 50%;
-  transition: 0.3s;
-  opacity: 1;
   cursor: pointer;
 }
 
@@ -116,115 +103,84 @@
   transform: scale(1.2);
 }
 
-/* ===== ADAPTIVE ===== */
-
-@media (max-width: 1280px) {
-  .pricingDots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width: 940px) and (max-width: 1280px) {
-  .container {
-    padding: 0 6rem;
-  }
-
-  .pricingDescription {
-    width: 60%;
-  }
-
-  .pricingCards {
-    gap: 1.6rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 940px) {
-  .container {
-    padding: 0 4rem;
-  }
-
-  .pricingTitle {
-    font-size: 3.4rem;
-    line-height: 4.2rem;
-  }
-
-  .pricingDescription {
-    font-size: 1.6rem;
-    width: 70%;
-  }
-
-  .pricingCard {
-    padding: 3rem 2rem;
-  }
-
-  .pricingCard h1 {
-    font-size: 3.4rem;
-  }
-
-  .pricingCard p {
-    width: 28.1rem;
-  }
-
-  .btnNextPage {
-    padding: 2rem 0;
-  }
-}
-
-@media (min-width: 390px) and (max-width: 768px) {
-  .container {
-    padding: 0 2.4rem;
-  }
-
-  .pricingTitle {
-    font-size: 3.8rem;
-    text-align: start;
-  }
-
-  .pricingDescription {
-    width: 100%;
-    text-align: start;
-  }
-
-  .pricingCard {
-    padding: 4.8rem 3rem;
-  }
-
-  .pricingCard p {
-    width: 28.1rem;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 390px) {
+@media (max-width: 576px) {
   .container {
     padding: 0 2rem;
   }
-
   .pricingTitle {
     font-size: 3.8rem;
     text-align: start;
   }
+  .slide {
+    flex: 0 0 100%;
+    padding-right: 0;
+  }
+}
 
-  .pricingCard {
-    padding: 4.8rem 3rem;
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    padding: 0 2.4rem;
+  }
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1180px) {
+  .container {
+    padding: 0 4rem;
+  }
+  .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1180px) and (max-width: 1580px) {
+  .container {
+    padding: 0 6rem;
+  }
+  .slide {
+    flex: 0 0 33.333%;
+  }
+}
+
+@media (min-width: 1580px) {
+  .slide {
+    flex: 0 0 20.83%;
+  }
+}
+
+@media (max-width: 32rem) {
+  .pricingTitle {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+
+  .pricingCard h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
   }
 
   .pricingCard p {
-    width: 90%;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+  }
+
+  .pricingCard ul p {
+    font-size: 1.4rem;
+  }
+
+  .listFeature {
+    font-size: 1.4rem;
+  }
+
+  .tariff {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
   }
 
   .btnNextPage {
-    width: 100%;
-    padding: 2.8rem 0;
-    background-color: #88b702;
-    border-radius: 8rem;
-    margin-top: 3.8rem;
-    font-weight: 700;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    color: #ffffff;
-    cursor: pointer;
+    font-size: 1.4rem;
+    padding: 2.2rem 0;
   }
 }
