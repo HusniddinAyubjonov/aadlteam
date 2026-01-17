@@ -9,8 +9,8 @@ import { ProjectsPage } from "./module/project-list/project-list-component"
 import { ContactUsPage } from "./module/contact-us/contact-us-component"
 import { NotFoundPage } from "./module/not-found/not-found"
 import { ScrollToTop } from "./scroll-to-top.component"
-import { Header } from "./ui-components/header/header"
-import { Footer } from "./ui-components/footer/footer"
+import { Header } from "./ui-components/header/header-component"
+import { Footer } from "./ui-components/footer/footer-component"
 
 function App() {
   // ---------------------------------------------------------------------------

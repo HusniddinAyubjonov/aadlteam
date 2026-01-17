@@ -3,7 +3,6 @@ import style from "./home.module.css"
 import {
   advantagesData,
   chooseUsData,
-  newData,
   servicesData,
   startWithData,
 } from "./constants"
@@ -12,12 +11,8 @@ import img1 from "../../assets/imgs/our-advanture-img.png"
 import img2 from "../../assets/imgs/choose-us-img.png"
 import img3 from "../../assets/imgs/build-feauture.png"
 import img4 from "../../assets/imgs/video.png"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Pagination } from "swiper/modules"
 import { ReviewSection } from "./section6/section-reviews.component"
 
-import "swiper/css"
-import "swiper/css/pagination"
 import { NewsSection } from "./section8/section-news.component"
 
 export function Home() {
@@ -184,76 +179,6 @@ export function Home() {
           </div>
         </div>
         <img src={img4} alt="video" className={style.video} />
-      </div>
-
-      {/*---------------------------------------------------------------------------
-      /// News
-      --------------------------------------------------------------------------- */}
-
-      <div className={style.news}>
-        <h1 className={style.newsTitle}>Browse our latest news</h1>
-
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={26}
-          slidesPerView={3}
-          pagination={{
-            clickable: true,
-            el: `.${style.newDots}`,
-            bulletClass: style.newDot,
-            bulletActiveClass: style.newActiveDot,
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            576: {
-              slidesPerView: 1.5,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 2.5,
-            },
-            1080: {
-              slidesPerView: 3,
-            },
-            1580: {
-              slidesPerView: 3.8,
-            },
-            2000: {
-              slidesPerView: 4,
-            },
-          }}
-          className={style.newCards}
-        >
-          {newData.map((info, index) => (
-            <SwiperSlide key={index}>
-              <div className={style.newCard}>
-                <img className={style.newCardImg} src={info.img} alt="image" />
-                <button className={style.newCardBtn}>{info.btnText}</button>
-                <h3 className={style.newCardTitle}>{info.title}</h3>
-                <p className={style.newCardDescription}>{info.description}</p>
-                <hr className={style.newCardLine} />
-
-                <div className={style.newCardUser}>
-                  <img
-                    className={style.newCardAvatar}
-                    src={info.avatar}
-                    alt="avatar"
-                  />
-                  <span className={style.userTexts}>
-                    <h4 className={style.userFullName}>{info.fullName}</h4>
-                    <h5 className={style.aboutUser}>{info.aboutUser}</h5>
-                  </span>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        <div className={style.newDots}></div>
       </div>
 
       <NewsSection />
