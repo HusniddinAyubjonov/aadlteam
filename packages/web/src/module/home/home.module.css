@@ -1,14 +1,26 @@
 .container {
-  position: relative;
   padding: 17rem 21rem;
-  background:
-    radial-gradient(
-      ellipse 80vw 60vh at 50% 34vh,
-      rgba(90, 140, 30, 0.45),
-      rgba(0, 0, 0, 0) 65%
-    ),
-    #000;
-  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: transparent;
+  text-align: center;
+  overflow: visible;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 30%;
+  background: linear-gradient(90deg, #88b702 10%, #05430b 60%);
+  filter: blur(15rem);
+  pointer-events: none;
 }
 
 .head {
@@ -429,19 +441,6 @@
 }
 
 @media (min-width: 1480px) {
-  .container {
-    position: relative;
-    padding: 17rem 21rem;
-    background:
-      radial-gradient(
-        ellipse 50vw 22vh at 50% 12vh,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-    overflow: hidden;
-  }
-
   .head {
     position: relative;
     z-index: 1;
@@ -502,6 +501,8 @@
       #000;
   }
 
+  
+
   .advantages {
     position: relative;
     z-index: 1;
@@ -522,16 +523,8 @@
 
 @media (min-width: 940px) and (max-width: 1280px) {
   .container {
-    position: relative;
     padding: 10rem 6rem;
-    background:
-      radial-gradient(
-        ellipse 80vw 50vh at 50% 50%,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-    overflow: hidden;
+    background: none;
   }
 
   .head {
@@ -770,6 +763,8 @@
 @media (min-width: 768px) and (max-width: 940px) {
   .container {
     padding: 10rem 4rem;
+    background: none;
+    height: fit-content;
   }
 
   .headTitle {
@@ -1037,6 +1032,7 @@
   .container {
     padding: 0 2.4rem;
     background: none;
+    height: fit-content;
   }
 
   .headTitle {
@@ -1332,6 +1328,7 @@
   .container {
     padding: 0 2.4rem;
     background: none;
+    height: fit-content;
   }
 
   .headTitle {

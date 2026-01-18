@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import style from "./section-reviews.module.css"
+import style from "./section-review.module.css"
 import { reviewData } from "../home.data"
 
 interface ReviewItem {

@@ -1,20 +1,22 @@
-import styles from "./about.module.css";
-import { missionData, PrincipleList, skillsData } from "./about-us.data";
+import styles from "./about.module.css"
+import { missionData, PrincipleList, skillsData } from "./about-us.data"
 
-import img from "../../assets/imgs/planet.png";
+import img from "../../assets/imgs/planet.png"
 
 export function About() {
   // ---------------------------------------------------------------------------
   return (
     <div>
       <section className={styles.container}>
-        <h1 className={styles.headTitle}>About Us</h1>
-        <p className={styles.headDescription}>
-          Aadl Team has 5 years of experience in web and app development,
-          covering frontend and backend. We deliver high-quality, scalable
-          solutions and focus on personalized, client-centered results. Most of
-          our work is private, but we are ready for new projects.
-        </p>
+        <div className={styles.aboutHeader}>
+          <h1 className={styles.headTitle}>About Us</h1>
+          <p className={styles.headDescription}>
+            Aadl Team has 5 years of experience in web and app development,
+            covering frontend and backend. We deliver high-quality, scalable
+            solutions and focus on personalized, client-centered results. Most
+            of our work is private, but we are ready for new projects.
+          </p>
+        </div>
       </section>
 
       {/*---------------------------------------------------------------------------
@@ -104,5 +106,5 @@ export function About() {
         </div>
       </section>
     </div>
-  );
+  )
 }

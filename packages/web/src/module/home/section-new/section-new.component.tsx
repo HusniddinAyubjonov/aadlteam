@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import style from "./section-news.module.css"
+import style from "./section-new.module.css"
 import { newData } from "../home.data"
 
 interface NewsItem {

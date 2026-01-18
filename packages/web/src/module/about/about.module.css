@@ -1,13 +1,31 @@
 .container {
-  position: relative;
   padding: 17rem 21rem;
-  background: radial-gradient(
-      ellipse 80vw 60vh at 50% 34vh,
-      rgba(90, 140, 30, 0.45),
-      rgba(0, 0, 0, 0) 65%
-    ),
-    #000;
-  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: transparent;
+  text-align: center;
+  overflow: visible;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 30%;
+  background: linear-gradient(97.05deg, #88B702 0%, #05430B 100%);
+  filter: blur(15rem);
+  pointer-events: none;
+}
+
+.aboutHeader {
+  position: relative;
+  z-index: 1;
 }
 
 .headTitle {
