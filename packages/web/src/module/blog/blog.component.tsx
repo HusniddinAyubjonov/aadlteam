@@ -1,7 +1,7 @@
 // BlogPage.jsx
 import { useState } from "react";
 import styles from "./blog.module.css";
-import { postData } from "./constants";
+import { postData } from "./blog.data";
 import { Link } from "react-router-dom";
 
 import img from "../../assets/imgs/news-img.png";

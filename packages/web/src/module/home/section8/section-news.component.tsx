@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import style from "./section-news.module.css"
-import { newData } from "../constants"
+import { newData } from "../home.data"
 
 interface NewsItem {
   img: string

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react"
 import style from "./section-reviews.module.css"
-import { reviewData } from "../constants"
+import { reviewData } from "../home.data"
 
 interface ReviewItem {
   feedback: string

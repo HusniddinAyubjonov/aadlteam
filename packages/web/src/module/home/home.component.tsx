@@ -5,14 +5,13 @@ import {
   chooseUsData,
   servicesData,
   startWithData,
-} from "./constants"
+} from "./home.data"
 
 import img1 from "../../assets/imgs/our-advanture-img.png"
 import img2 from "../../assets/imgs/choose-us-img.png"
 import img3 from "../../assets/imgs/build-feauture.png"
 import img4 from "../../assets/imgs/video.png"
 import { ReviewSection } from "./section6/section-reviews.component"
-
 import { NewsSection } from "./section8/section-news.component"
 
 export function Home() {

@@ -1,5 +1,5 @@
 import styles from "./about.module.css";
-import { missionData, PrincipleList, skillsData } from "./constants";
+import { missionData, PrincipleList, skillsData } from "./about-us.data";
 
 import img from "../../assets/imgs/planet.png";
 

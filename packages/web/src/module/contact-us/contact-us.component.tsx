@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { contactData, faqData } from "./constants";
+import { contactData, faqData } from "./contact-us.data";
 import styles from "./contact-us.module.css";
 
 export function ContactUsPage() {
