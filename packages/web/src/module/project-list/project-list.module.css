@@ -86,7 +86,6 @@
 
 .projectDotActive {
   background: #88b702;
-  transform: scale(1.2);
 }
 
 @media (max-width: 576px) {
@@ -101,7 +100,7 @@
 
   .slide {
     flex: 0 0 100%;
-    padding-right: 0;
+    padding-right: 1.6rem;
   }
 
   .card h3 {
@@ -114,7 +113,6 @@
   }
 }
 
-/* 📱 576–768 — 2 */
 @media (min-width: 576px) and (max-width: 768px) {
   .container {
     padding: 0 2.4rem;

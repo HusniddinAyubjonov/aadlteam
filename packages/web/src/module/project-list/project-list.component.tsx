@@ -12,13 +12,14 @@ interface ProjectItem {
 }
 
 export function ProjectsPage() {
-  const [index, setIndex] = useState<number>(0)
+  const [index, setIndex] = useState(0)
+  const [slidesPerView, setSlidesPerView] = useState(1)
 
-  const startX = useRef<number>(0)
-  const currentX = useRef<number>(0)
-  const isDragging = useRef<boolean>(false)
+  const startX = useRef(0)
+  const currentX = useRef(0)
+  const isDragging = useRef(false)
 
-  const getSlidesPerView = (): number => {
+  const calcSlidesPerView = () => {
     const w = window.innerWidth
     if (w < 576) return 1
     if (w < 768) return 2
@@ -27,7 +28,16 @@ export function ProjectsPage() {
     return 4.8
   }
 
-  const slidesPerView = getSlidesPerView()
+  useEffect(() => {
+    const onResize = () => {
+      setSlidesPerView(calcSlidesPerView())
+      setIndex(0)
+    }
+
+    onResize()
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [])
 
   const dotsCount = Math.max(Math.ceil(Projects.length - slidesPerView + 1), 1)
 
@@ -39,7 +49,6 @@ export function ProjectsPage() {
     setIndex(i)
   }
 
-  /* ===== TOUCH ===== */
   const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startX.current = e.touches[0].clientX
     isDragging.current = true
@@ -60,12 +69,6 @@ export function ProjectsPage() {
     isDragging.current = false
   }
 
-  useEffect(() => {
-    const onResize = () => setIndex(0)
-    window.addEventListener("resize", onResize)
-    return () => window.removeEventListener("resize", onResize)
-  }, [])
-
   return (
     <section className={style.container}>
       <div className={style.project}>
@@ -77,7 +80,9 @@ export function ProjectsPage() {
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            style={{ transform: `translateX(-${index * 100}%)` }}
+            style={{
+              transform: `translateX(-${index * (100 / slidesPerView)}%)`,
+            }}
           >
             {Projects.map((info: ProjectItem, i: number) => (
               <div className={style.slide} key={i}>

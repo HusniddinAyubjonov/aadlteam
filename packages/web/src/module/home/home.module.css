@@ -13,11 +13,11 @@
 .container::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  height: 30%;
+  height: 40%;
   background: linear-gradient(90deg, #88b702 10%, #05430b 60%);
   filter: blur(15rem);
   pointer-events: none;
@@ -161,13 +161,25 @@
 
 .section1 {
   position: relative;
-  background:
-    radial-gradient(
-      ellipse 100vw 100vh at 40% 50%,
-      rgba(90, 140, 30, 0.45),
-      rgba(0, 0, 0, 0) 65%
-    ),
-    #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: visible;
+  height: min-content;
+}
+
+.section1::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 50%;
+  background: linear-gradient(97.05deg, #88B702 0%, rgba(5, 67, 11, 0.1) 100%);
+  filter: blur(15rem);
+  pointer-events: none;
 }
 
 .advantages {
@@ -441,6 +453,10 @@
 }
 
 @media (min-width: 1480px) {
+.container {
+    height: fit-content;
+  }
+
   .head {
     position: relative;
     z-index: 1;
@@ -490,20 +506,8 @@
     height: auto;
   }
 
-  .section1 {
-    position: relative;
-    background:
-      radial-gradient(
-        ellipse 80vw 50vh at 20% 50%,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-  }
-
-  
-
   .advantages {
+    width: 100%;
     position: relative;
     z-index: 1;
     padding: 21.5rem 12.6rem;
@@ -614,18 +618,6 @@
   /*---------------------------------------------------------------------------
       /// Our advantages
 --------------------------------------------------------------------------- */
-
-  .section1 {
-    position: relative;
-    background:
-      radial-gradient(
-        ellipse 100vw 90vh at 30% 50%,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-  }
-
   .advantages {
     position: relative;
     z-index: 1;
@@ -860,18 +852,6 @@
   /*---------------------------------------------------------------------------
       /// Our advantages
 --------------------------------------------------------------------------- */
-
-  .section1 {
-    position: relative;
-    background:
-      radial-gradient(
-        ellipse 80vw 62vh at 30% 50%,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-  }
-
   .advantages {
     position: relative;
     z-index: 1;
@@ -1133,18 +1113,6 @@
   /*---------------------------------------------------------------------------
       /// Our advantages
 --------------------------------------------------------------------------- */
-
-  .section1 {
-    position: relative;
-    background:
-      radial-gradient(
-        ellipse 100% 110vh at 50% 50%,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-  }
-
   .advantages {
     padding: 0 2.4rem;
     margin-top: 0;
@@ -1431,18 +1399,6 @@
   /*---------------------------------------------------------------------------
       /// Our Advantages
 --------------------------------------------------------------------------- */
-
-  .section1 {
-    position: relative;
-    background:
-      radial-gradient(
-        ellipse 100% 120vh at 50% 50%,
-        rgba(90, 140, 30, 0.45),
-        rgba(0, 0, 0, 0) 65%
-      ),
-      #000;
-  }
-
   .advantages {
     padding: 0 2.4rem;
     margin-top: 0;

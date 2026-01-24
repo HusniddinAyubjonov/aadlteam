@@ -100,7 +100,6 @@
 
 .pricingDotActive {
   background: #88b702;
-  transform: scale(1.2);
 }
 
 @media (max-width: 576px) {
@@ -113,7 +112,7 @@
   }
   .slide {
     flex: 0 0 100%;
-    padding-right: 0;
+    padding-right: 1.6rem;
   }
 }
 

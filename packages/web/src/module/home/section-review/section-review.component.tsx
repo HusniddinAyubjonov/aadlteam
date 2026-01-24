@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import style from "./section-review.module.css"
 import { reviewData } from "../home.data"
 
@@ -10,41 +10,44 @@ interface ReviewItem {
 }
 
 export function ReviewSection() {
-  const [index, setIndex] = useState<number>(0)
+  const [index, setIndex] = useState(0)
+  const [slidesPerView, setSlidesPerView] = useState(2)
 
-  const startX = useRef<number>(0)
-  const currentX = useRef<number>(0)
-  const isDragging = useRef<boolean>(false)
+  const startX = useRef(0)
+  const currentX = useRef(0)
+  const isDragging = useRef(false)
 
-  const slidesPerView: number =
-    typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 2
-
-  const maxIndex: number =
-    Math.ceil((reviewData as ReviewItem[]).length / slidesPerView) - 1
-
-  const goTo = (i: number): void => {
-    if (i < 0) {
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesPerView(window.innerWidth < 768 ? 1 : 2)
       setIndex(0)
-      return
     }
-    if (i > maxIndex) {
-      setIndex(maxIndex)
-      return
-    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  const maxIndex = Math.ceil(reviewData.length / slidesPerView) - 1
+
+  const goTo = (i: number) => {
+    if (i < 0) return setIndex(0)
+    if (i > maxIndex) return setIndex(maxIndex)
     setIndex(i)
   }
 
-  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>): void => {
+  // 👉 touch events
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startX.current = e.touches[0].clientX
     isDragging.current = true
   }
 
-  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>): void => {
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     if (!isDragging.current) return
     currentX.current = e.touches[0].clientX
   }
 
-  const onTouchEnd = (): void => {
+  const onTouchEnd = () => {
     if (!isDragging.current) return
 
     const diff = startX.current - currentX.current
@@ -57,7 +60,7 @@ export function ReviewSection() {
 
   return (
     <section className={style.review}>
-      <h1 className={style.reviewTitle}>What our users say?</h1>
+      <h2 className={style.reviewTitle}>What our users say?</h2>
 
       <div className={style.sliderWrapper}>
         <div
@@ -66,10 +69,10 @@ export function ReviewSection() {
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
           style={{
-            transform: `translateX(-${index * 100}%)`,
+            transform: `translateX(-${index * (100 / slidesPerView)}%)`,
           }}
         >
-          {(reviewData).map((item, i) => (
+          {reviewData.map((item: ReviewItem, i: number) => (
             <div className={style.slide} key={i}>
               <div className={style.reviewCard}>
                 <p className={style.cardFeeback}>{item.feedback}</p>
@@ -78,7 +81,7 @@ export function ReviewSection() {
                   <img
                     className={style.userAvatar}
                     src={item.avatar}
-                    alt="avatar"
+                    alt={item.fullName}
                   />
 
                   <div className={style.userInfo}>
@@ -91,6 +94,7 @@ export function ReviewSection() {
           ))}
         </div>
 
+        {/* 👉 dots */}
         <div className={style.dots}>
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <span

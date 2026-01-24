@@ -13,13 +13,14 @@ interface NewsItem {
 }
 
 export function NewsSection() {
-  const [index, setIndex] = useState<number>(0)
+  const [index, setIndex] = useState(0)
+  const [slidesPerView, setSlidesPerView] = useState(1)
 
-  const startX = useRef<number>(0)
-  const currentX = useRef<number>(0)
-  const isDragging = useRef<boolean>(false)
+  const startX = useRef(0)
+  const currentX = useRef(0)
+  const isDragging = useRef(false)
 
-  const getSlidesPerView = (): number => {
+  const calcSlidesPerView = () => {
     const w = window.innerWidth
     if (w < 576) return 1
     if (w < 768) return 1.5
@@ -29,7 +30,16 @@ export function NewsSection() {
     return 3.8
   }
 
-  const slidesPerView = getSlidesPerView()
+  useEffect(() => {
+    const onResize = () => {
+      setSlidesPerView(calcSlidesPerView())
+      setIndex(0)
+    }
+
+    onResize()
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [])
 
   const dotsCount = Math.max(Math.ceil(newData.length - slidesPerView + 1), 1)
 
@@ -41,7 +51,6 @@ export function NewsSection() {
     setIndex(i)
   }
 
-  /* ===== TOUCH ===== */
   const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     startX.current = e.touches[0].clientX
     isDragging.current = true
@@ -63,13 +72,6 @@ export function NewsSection() {
     isDragging.current = false
   }
 
-  /* ===== RESET ON RESIZE ===== */
-  useEffect(() => {
-    const onResize = () => setIndex(0)
-    window.addEventListener("resize", onResize)
-    return () => window.removeEventListener("resize", onResize)
-  }, [])
-
   return (
     <section className={style.news}>
       <h1 className={style.newsTitle}>Browse our latest news</h1>
@@ -81,15 +83,18 @@ export function NewsSection() {
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
           style={{
-            transform: `translateX(-${index * 100}%)`,
+            transform: `translateX(-${index * (100 / slidesPerView)}%)`,
           }}
         >
           {newData.map((info: NewsItem, i: number) => (
             <div className={style.slide} key={i}>
               <div className={style.newCard}>
                 <img className={style.newCardImg} src={info.img} alt="" />
+
                 <button className={style.newCardBtn}>{info.btnText}</button>
+
                 <h3 className={style.newCardTitle}>{info.title}</h3>
+
                 <p className={style.newCardDescription}>{info.description}</p>
 
                 <hr className={style.newCardLine} />

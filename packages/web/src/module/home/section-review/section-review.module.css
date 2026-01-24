@@ -115,12 +115,11 @@
 
   .slide {
     min-width: 100%;
-    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
     border-radius: 4rem;
   }
 
   .reviewCard {
-    background: transparent;
+    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
     box-shadow: none;
     padding: 0;
   }
@@ -162,12 +161,11 @@
 
   .slide {
     min-width: 100%;
-    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
     border-radius: 4rem;
   }
 
   .reviewCard {
-    background: transparent;
+    background: radial-gradient(#597b03 0%, #0f0f0f 99%);
     box-shadow: none;
     padding: 0;
   }

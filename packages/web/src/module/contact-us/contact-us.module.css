@@ -30,7 +30,7 @@
   flex-direction: column;
 }
 
-label {
+.form .field label {
   margin-bottom: 1.2rem;
   font-weight: 700;
   font-style: Bold;
@@ -41,8 +41,8 @@ label {
   text-transform: uppercase;
 }
 
-input,
-textarea {
+.form .field input,
+.form .fieldFull textarea {
   background: #1e1e1e;
   border: none;
   outline: none;
@@ -56,14 +56,14 @@ textarea {
   vertical-align: middle;
 }
 
-textarea {
+.form .fieldFull textarea {
   border-radius: 1.6rem;
   padding-bottom: 11.4rem;
   resize: none;
 }
 
-input:focus,
-textarea:focus {
+.form .field input:focus,
+.form .fieldFull textarea:focus {
   outline: 1px solid #88b702;
   outline-offset: 2px;
 }
@@ -201,7 +201,10 @@ textarea:focus {
   overflow: hidden;
   opacity: 0;
   margin-top: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    margin-top 0.5s ease;
 }
 
 .answer.open {

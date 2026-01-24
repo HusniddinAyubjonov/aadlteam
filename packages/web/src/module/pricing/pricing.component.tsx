@@ -13,13 +13,15 @@ interface PricingItem {
 }
 
 export function PricingPage() {
-  const [index, setIndex] = useState<number>(0)
+  const [index, setIndex] = useState(0)
+  const [slidesPerView, setSlidesPerView] = useState(1)
 
-  const startX = useRef<number>(0)
-  const currentX = useRef<number>(0)
-  const isDragging = useRef<boolean>(false)
+  const startX = useRef(0)
+  const currentX = useRef(0)
+  const isDragging = useRef(false)
 
-  const getSlidesPerView = (): number => {
+  /* ===== SLIDES PER VIEW ===== */
+  const calcSlidesPerView = () => {
     const w = window.innerWidth
     if (w < 576) return 1
     if (w < 768) return 2
@@ -28,8 +30,18 @@ export function PricingPage() {
     return 4.8
   }
 
-  const slidesPerView = getSlidesPerView()
+  useEffect(() => {
+    const onResize = () => {
+      setSlidesPerView(calcSlidesPerView())
+      setIndex(0)
+    }
 
+    onResize()
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [])
+
+  /* ===== DOTS ===== */
   const dotsCount = Math.max(
     Math.ceil(pricingData.length - slidesPerView + 1),
     1,
@@ -64,12 +76,6 @@ export function PricingPage() {
     isDragging.current = false
   }
 
-  useEffect(() => {
-    const onResize = () => setIndex(0)
-    window.addEventListener("resize", onResize)
-    return () => window.removeEventListener("resize", onResize)
-  }, [])
-
   return (
     <section className={styles.container}>
       <div className={styles.pricing}>
@@ -81,12 +87,15 @@ export function PricingPage() {
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            style={{ transform: `translateX(-${index * 100}%)` }}
+            style={{
+              transform: `translateX(-${index * (100 / slidesPerView)}%)`,
+            }}
           >
             {pricingData.map((price: PricingItem, i: number) => (
               <div className={styles.slide} key={i}>
                 <div className={styles.pricingCard}>
                   <button className={styles.tariff}>{price.tariff}</button>
+
                   <h1>{price.price}</h1>
                   <p>{price.title}</p>
 
@@ -109,6 +118,7 @@ export function PricingPage() {
             ))}
           </div>
 
+          {/* DOTS */}
           <div className={styles.pricingDots}>
             {Array.from({ length: dotsCount }).map((_, i) => (
               <span
