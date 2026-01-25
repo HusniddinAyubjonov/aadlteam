@@ -4,7 +4,7 @@
 /* FONT */
 /* --------------------------------------------------------------------------- */
 
-/* @font-face {
+@font-face {
   font-family: "DM Sans";
   src: url("../assets/fonts/DMSans/DMSans-Thin.ttf") format("truetype");
   font-weight: 200;
@@ -56,7 +56,7 @@
   font-family: "DM Sans";
   src: url("../assets/fonts/DMSans/DMSans-Black.ttf") format("truetype");
   font-weight: 900;
-} */
+}
 
 /* --------------------------------------------------------------------------- */
 /* RESET */

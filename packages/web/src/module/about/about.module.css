@@ -38,7 +38,7 @@
 }
 
 .headDescription {
-  padding: 2.1rem 24rem;
+  padding: 2.1rem 22rem;
   font-weight: 400;
   font-style: Regular;
   font-size: 1.8rem;
@@ -229,7 +229,7 @@
   .container {
     height: fit-content;
   }
-  
+
   .ourMission {
     padding: 12.6rem;
   }
