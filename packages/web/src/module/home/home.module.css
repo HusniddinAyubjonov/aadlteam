@@ -38,7 +38,7 @@
 }
 
 .headDescription {
-  padding: 2.1rem 25rem;
+  padding: 2.1rem 22rem;
   font-weight: 400;
   font-style: Regular;
   font-size: 1.8rem;
@@ -65,7 +65,7 @@
 }
 
 .projectDescription {
-  padding: 1.6rem 38rem;
+  padding: 1.6rem 36rem;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 3.2rem;
@@ -81,26 +81,27 @@
   padding: 4.6rem 0;
 }
 
-.card {
-  background-color: #1e1e1e;
-  border-radius: 4rem;
-  padding: 4.8rem 2.8rem;
+.textContent {
   display: flex;
   flex-direction: column;
-  color: white;
-  gap: 1.2rem;
+  gap: 2.2rem;
 }
 
 .bigCard {
+  display: flex;
   width: 47.7rem;
-  background-color: #88b702;
   color: white;
   grid-column: 2;
   grid-row: 1 / 3;
-  display: flex;
-  padding: 4.8rem 2.2rem;
-  position: relative;
-  overflow: hidden;
+  border-radius: 4rem;
+  flex-direction: column;
+  background-color: #88b702;
+  justify-content: space-between;
+  padding: 4.8rem 3.3rem 0rem 3.3rem;
+}
+
+.bigIcon {
+  padding: 3.7rem 2.85rem 0rem 2.85rem;
 }
 
 .cardTitle {
@@ -118,41 +119,6 @@
   font-size: 1.6rem;
   line-height: 2.6rem;
   text-align: start;
-  margin: 0;
-}
-
-.icons {
-  width: 6.8rem;
-  height: 6.8rem;
-  background: #88b702;
-  border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon {
-  width: 4.2rem;
-  height: 3.4rem;
-}
-
-.bigCard .icons .icon {
-  position: absolute;
-  width: 30rem;
-  height: 40rem;
-  left: 8rem;
-  bottom: 0;
-}
-
-.bigCard .cardTitle {
-  position: absolute;
-  top: 4.4rem;
-}
-
-.bigCard .cardDescription {
-  position: absolute;
-  width: 90%;
-  top: 9.2rem;
 }
 
 /*---------------------------------------------------------------------------
@@ -221,35 +187,6 @@
   margin-bottom: 2rem;
 }
 
-.advantagesInfo {
-  display: flex;
-  align-items: center;
-  margin-top: 1.6rem;
-  gap: 1.6rem;
-}
-
-.advantagesInfo .advantagesIcons {
-  background-color: #88b702;
-  width: 4.6rem;
-  height: 4.6rem;
-  border-radius: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.advantagesIcon {
-  width: 3rem;
-  height: 3rem;
-}
-
-.advantagesInfoText {
-  width: 42rem;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-}
-
 /*---------------------------------------------------------------------------
       /// Why Choose Us
 --------------------------------------------------------------------------- */
@@ -301,35 +238,6 @@
   width: 47rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.chooseUsInfo {
-  display: flex;
-  align-items: center;
-  margin-top: 1.6rem;
-  gap: 1.6rem;
-}
-
-.chooseUsInfo .icons {
-  background-color: #88b702;
-  width: 4.6rem;
-  height: 4.6rem;
-  border-radius: 1.3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icons .icon {
-  width: 3rem;
-  height: 3rem;
-}
-
-.chooseUsInfoTitle {
-  width: 42rem;
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
 }
 
 /*---------------------------------------------------------------------------
@@ -422,35 +330,6 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
-.startInfo {
-  display: flex;
-  align-items: center;
-  margin-top: 1.6rem;
-  gap: 1.6rem;
-}
-
-.startInfo .icons {
-  background-color: #88b702;
-  width: 4.6rem;
-  height: 4.6rem;
-  border-radius: 1.3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.startInfo .icons .icon {
-  width: 3rem;
-  height: 3rem;
-}
-
-.startInfoTitle {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-}
-
 @media (min-width: 1480px) {
   .container {
     height: fit-content;
@@ -467,21 +346,12 @@
 
   .bigCard {
     width: auto;
-    position: relative;
   }
 
-  .bigCard .icons {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40rem;
-    left: 0;
-  }
-
-  .bigCard .icons .icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  .bigIcon {
+    width: fit-content;
+    height: fit-content;
+    padding: 3.7rem 0rem 0rem 4rem;
   }
 
   .yourProject {
@@ -573,16 +443,6 @@
     padding: 4rem 0;
   }
 
-  .card {
-    background-color: #1e1e1e;
-    border-radius: 4rem;
-    padding: 3.8rem 2rem;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    gap: 1.2rem;
-  }
-
   .bigCard {
     width: 40rem;
     background-color: #88b702;
@@ -590,28 +450,15 @@
     grid-column: 2;
     grid-row: 1 / 3;
     display: flex;
-    padding: 4rem 2.2rem;
-    position: relative;
+    padding: 4rem 2.2rem 0rem 2.2rem;
+    justify-content: space-between;
+    gap: 4rem;
     overflow: hidden;
   }
 
-  .bigCard .icons .icon {
-    position: absolute;
-    width: 30rem;
-    height: 50rem;
-    top: 32.5rem;
-    left: 5.5rem;
-  }
-
-  .bigCard .cardTitle {
-    position: absolute;
-    top: 4.4rem;
-  }
-
-  .bigCard .cardDescription {
-    position: absolute;
-    width: 30rem;
-    top: 9.2rem;
+  .bigIcon {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
   }
 
   /*---------------------------------------------------------------------------
@@ -700,13 +547,6 @@
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
   }
-
-  .chooseUsInfoTitle {
-    width: 38rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-
   /*---------------------------------------------------------------------------
       /// Build the Future of Technology with Us
 --------------------------------------------------------------------------- */
@@ -799,59 +639,26 @@
 
   .content {
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 30rem;
+    grid-template-rows: auto 31rem;
     gap: 2rem;
-  }
-
-  .card {
-    width: 33rem;
-    margin: 0 auto;
   }
 
   .bigCard {
     grid-column: 2;
     grid-row: 2;
-    width: 33rem;
-    height: 62rem;
+    height: 56.7rem;
+    overflow: hidden;
   }
 
-  .card .cardTitle,
-  .bigCard .cardTitle {
+  .cardTitle {
     font-size: 1.8rem;
     margin-top: 1rem;
-    width: 30rem;
   }
 
-  .card .cardDescription,
-  .bigCard .cardDescription {
+  .cardDescription {
     font-size: 1.6rem;
     width: 90%;
-    text-align: start;
-    margin: 0;
   }
-  .icons {
-    width: 6.8rem;
-    height: 6.8rem;
-    background: #88b702;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .icon {
-    width: 4.2rem;
-    height: 3.4rem;
-  }
-
-  .bigCard .icons .icon {
-    position: absolute;
-    width: 28.1rem;
-    height: 50rem;
-    top: 19.5rem;
-    left: 2.8rem;
-  }
-
   /*---------------------------------------------------------------------------
       /// Our advantages
 --------------------------------------------------------------------------- */
@@ -895,20 +702,6 @@
     width: 33rem;
     margin-top: 1.6rem;
     margin: 1.6rem auto;
-  }
-
-  .advantagesInfo {
-    width: 33rem;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    margin: 1.6rem auto;
-  }
-
-  .advantagesInfoText {
-    width: 22.2rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
   }
 
   /*---------------------------------------------------------------------------
@@ -958,13 +751,6 @@
     width: 33rem;
     margin: 1.6rem 0;
   }
-
-  .chooseUsInfoTitle {
-    width: 30rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-
   /*---------------------------------------------------------------------------
       /// Build the Future of Technology with Us
 --------------------------------------------------------------------------- */
@@ -1063,66 +849,39 @@
     gap: 2rem;
   }
 
-  .card {
-    width: 35.8rem;
-    margin: 0 auto;
-  }
-
   .bigCard {
     grid-column: 1;
     grid-row: 3;
-    width: 35.8rem;
-    height: 62rem;
+    width: 100%;
+    height: 52rem;
+    overflow: hidden;
   }
 
-  .card .cardTitle,
-  .bigCard .cardTitle {
+  .cardTitle {
     font-size: 1.8rem;
     margin-top: 1rem;
-    width: 30rem;
   }
 
-  .card .cardDescription,
-  .bigCard .cardDescription {
+  .cardDescription {
     font-size: 1.6rem;
-    width: 90%;
-    text-align: start;
-    margin: 0;
-  }
-
-  .icons {
-    width: 6.8rem;
-    height: 6.8rem;
-    background: #88b702;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .icon {
-    width: 4.2rem;
-    height: 3.4rem;
-  }
-
-  .bigCard .icons .icon {
-    position: absolute;
-    width: 28.1rem;
-    height: 50rem;
-    top: 19.5rem;
-    left: 3.8rem;
   }
 
   /*---------------------------------------------------------------------------
       /// Our advantages
 --------------------------------------------------------------------------- */
+
+  .section1 {
+    align-items: center;
+    justify-content: center;
+  }
+
   .advantages {
     padding: 0 2.4rem;
     margin-top: 0;
     position: relative;
     z-index: 1;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 2rem;
   }
 
@@ -1146,19 +905,6 @@
     line-height: 2.6rem;
     width: 33rem;
     margin-top: 1.6rem;
-  }
-
-  .advantagesInfo {
-    display: flex;
-    align-items: center;
-    margin-top: 1.6rem;
-    gap: 1.6rem;
-  }
-
-  .advantagesInfoText {
-    width: 22.2rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
   }
 
   /*---------------------------------------------------------------------------
@@ -1211,13 +957,6 @@
     width: 30rem;
     margin: 1.6rem 0;
   }
-
-  .chooseUsInfoTitle {
-    width: 28rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-
   /*---------------------------------------------------------------------------
       /// Build the Future of Technology with Us
 --------------------------------------------------------------------------- */
@@ -1279,18 +1018,6 @@
     margin-top: 1.6rem;
   }
 
-  .startInfo {
-    display: flex;
-    align-items: center;
-    margin-top: 1.6rem;
-    gap: 1.6rem;
-  }
-
-  .startInfoTitle {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-
   .starts .video {
     margin-top: 2.4rem;
   }
@@ -1347,69 +1074,38 @@
     gap: 2rem;
   }
 
-  .card {
-    width: 100%;
-  }
-
   .bigCard {
     grid-column: auto;
     grid-row: auto;
+    width: 100%;
+    height: 52rem;
+    overflow: hidden;
   }
 
-  .card .cardTitle,
-  .bigCard .cardTitle {
+  .cardTitle {
     font-size: 1.8rem;
     margin-top: 1rem;
-    width: 90%;
   }
 
-  .card .cardDescription,
-  .bigCard .cardDescription {
+  .cardDescription {
     font-size: 1.6rem;
-    width: 22rem;
-    text-align: start;
-    margin: 0;
   }
-
-  .bigCard {
-    width: 100%;
-    height: 42rem;
-  }
-
-  .icons {
-    width: 6.8rem;
-    height: 6.8rem;
-    background: #88b702;
-    border-radius: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .icon {
-    width: 4.2rem;
-    height: 3.4rem;
-  }
-
-  .bigCard .icons .icon {
-    position: absolute;
-    width: 22rem;
-    height: 30rem;
-    top: 22rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   /*---------------------------------------------------------------------------
       /// Our Advantages
---------------------------------------------------------------------------- */
+      --------------------------------------------------------------------------- */
+
+  .section1 {
+    align-items: start;
+    justify-content: start;
+  }
+
   .advantages {
     padding: 0 2.4rem;
     margin-top: 0;
     position: relative;
     z-index: 1;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 2rem;
   }
 
@@ -1436,19 +1132,6 @@
     margin-top: 1.6rem;
   }
 
-  .advantagesInfo {
-    display: flex;
-    align-items: center;
-    margin-top: 1.6rem;
-    gap: 1.6rem;
-  }
-
-  .advantagesInfoText {
-    width: 22rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-
   /*---------------------------------------------------------------------------
       /// Why Choose Us
 --------------------------------------------------------------------------- */
@@ -1460,7 +1143,7 @@
 
   .section {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
 
   .imgLaptop {
@@ -1497,13 +1180,6 @@
     width: 28rem;
     margin: 1.6rem 0;
   }
-
-  .chooseUsInfoTitle {
-    width: 22rem;
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-
   /*---------------------------------------------------------------------------
       /// Build the Future of Technology with Us
 --------------------------------------------------------------------------- */
@@ -1562,22 +1238,8 @@
     margin-top: 1.6rem;
   }
 
-  .startInfo {
-    display: flex;
-    align-items: center;
-    margin-top: 1.6rem;
-    gap: 1.6rem;
-  }
-
-  .startInfoTitle {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-  }
-  .starts .video {
-    margin-top: 0;
-  }
-
   .video {
+    margin-top: 0;
     width: 100%;
   }
 }

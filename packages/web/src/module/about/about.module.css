@@ -61,63 +61,22 @@
   font-style: Bold;
   font-size: 4.2rem;
   line-height: 5.5rem;
-  letter-spacing: 0px;
   vertical-align: middle;
+  margin-bottom: 2rem;
 }
 
 .principleCards {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2.8rem;
-  gap: 2.8rem;
+  gap: 2.4rem;
 }
 
-.principleCard {
+.contentStyle {
   display: flex;
-  background-color: #1e1e1e;
-  border-radius: 40px;
+  flex-direction: row !important;
+  width: 48% !important;
   padding: 5.8rem 3.2rem;
-  width: 48%;
-}
-
-.principleCardIcons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #88b702;
-  border-radius: 2rem;
-  width: 6.8rem;
-  height: 6.8rem;
-}
-
-.principleCardIcon {
-  width: 50%;
-}
-
-.principleCardText {
-  width: 80%;
-  margin-left: 2.4rem;
-}
-
-.principleCardTitle {
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 1.8rem;
-  line-height: 2.6rem;
-  letter-spacing: 0.9px;
-  vertical-align: middle;
-  text-transform: uppercase;
-}
-
-.principleCardDescription {
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-  letter-spacing: 0%;
-  vertical-align: middle;
-  margin-top: 1rem;
-  width: 100%;
+  gap: 2.4rem;
 }
 
 /* <---------------------------------------------------------------------------
@@ -306,21 +265,8 @@
     font-size: 1.6rem;
   }
 
-  /* <---------------------------------------------------------------------------
-      /// Our Principles
----------------------------------------------------------------------------> */
-
   .ourPrinciples {
-    padding: 0 6rem;
-  }
-
-  .principleCard {
-    flex-direction: column;
-  }
-
-  .principleCardText {
-    margin-left: 0;
-    margin-top: 3rem;
+    padding: 6rem;
   }
 
   /* <---------------------------------------------------------------------------
@@ -420,35 +366,6 @@
 
   .ourPrinciples {
     padding: 0 4rem;
-  }
-
-  .ourPrincipleTitle {
-    text-align: center;
-  }
-
-  .principleCards {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2.8rem;
-    gap: 1.6rem;
-  }
-
-  .principleCard {
-    flex-direction: column;
-  }
-
-  .principleCardText {
-    margin-left: 0;
-    margin-top: 3rem;
-  }
-
-  .principleCardTitle {
-    font-size: 1.8rem;
-  }
-
-  .principleCardDescription {
-    width: 100%;
-    font-size: 1.6rem;
   }
 
   /* <---------------------------------------------------------------------------
@@ -558,35 +475,14 @@
     padding: 0 2.4rem;
   }
 
-  .ourPrincipleTitle {
-    font-size: 2.8rem;
-    line-height: 3.6rem;
-    text-align: start;
-  }
-
   .principleCards {
+    display: flex;
     flex-direction: column;
-    margin-top: 2.8rem;
-    gap: 1.6rem;
+    gap: 2.4rem;
   }
 
-  .principleCard {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .principleCardText {
-    margin-left: 0;
-    margin-top: 3rem;
-  }
-
-  .principleCardTitle {
-    font-size: 1.8rem;
-  }
-
-  .principleCardDescription {
-    width: 100%;
-    font-size: 1.6rem;
+  .contentStyle {
+    width: 100% !important;
   }
 
   /* <---------------------------------------------------------------------------
@@ -689,35 +585,14 @@
     padding: 0 2rem;
   }
 
-  .ourPrincipleTitle {
-    font-size: 2.8rem;
-    line-height: 3.6rem;
-    text-align: start;
-  }
-
   .principleCards {
+    display: flex;
     flex-direction: column;
-    margin-top: 2.8rem;
-    gap: 1.6rem;
+    gap: 2.4rem;
   }
 
-  .principleCard {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .principleCardText {
-    margin-left: 0;
-    margin-top: 3rem;
-  }
-
-  .principleCardTitle {
-    font-size: 1.8rem;
-  }
-
-  .principleCardDescription {
-    width: 100%;
-    font-size: 1.6rem;
+  .contentStyle {
+    width: 100% !important;
   }
 
   /* <---------------------------------------------------------------------------

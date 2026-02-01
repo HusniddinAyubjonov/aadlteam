@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { contactData, faqData } from "./contact-us.data";
-import styles from "./contact-us.module.css";
+import { useState } from "react"
+import { contactData, faqData } from "./contact-us.data"
+import styles from "./contact-us.module.css"
+import { InfoIcon } from "../../ui-components/info-icon/info-icon.component"
 
 export function ContactUsPage() {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number | null>(null)
 
   const toggle = (index: number) => {
-    setOpen(open === index ? null : index);
-  };
+    setOpen(open === index ? null : index)
+  }
 
   return (
     <>
@@ -52,19 +53,13 @@ export function ContactUsPage() {
             </p>
 
             <div className={styles.emails}>
-              {contactData.map((item, index) => (
-                <div key={index} className={styles.email}>
-                  <div className={styles.icons}>
-                    <img className={styles.icon} src={item.img} alt="icon" />
-                  </div>
-
-                  <a
-                    className={styles.links}
-                    href={`mailto:${item.email}?subject=Hello&body=Write your message here`}
-                  >
-                    {item.email}
-                  </a>
-                </div>
+              {contactData.map((item) => (
+                <InfoIcon
+                  key={item.id}
+                  title={item.email}
+                  icon={item.img}
+                  className={styles.icons}
+                />
               ))}
             </div>
           </div>
@@ -95,5 +90,5 @@ export function ContactUsPage() {
         ))}
       </section>
     </>
-  );
+  )
 }

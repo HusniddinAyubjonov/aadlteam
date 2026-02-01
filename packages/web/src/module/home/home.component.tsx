@@ -1,4 +1,3 @@
-import clsx from "clsx"
 import style from "./home.module.css"
 import {
   advantagesData,
@@ -13,6 +12,8 @@ import img3 from "../../assets/imgs/build-feauture.png"
 import img4 from "../../assets/imgs/video.png"
 import { ReviewSection } from "./section-review/section-review.component"
 import { NewsSection } from "./section-new/section-new.component"
+import { CardInfo } from "../../ui-components/card-info/card-info.component"
+import { InfoIcon } from "../../ui-components/info-icon/info-icon.component"
 
 export function Home() {
   // ---------------------------------------------------------------------------
@@ -46,18 +47,31 @@ export function Home() {
 
           <div className={style.content}>
             {servicesData.map((service) => (
-              <div
-                key={service.title}
-                className={clsx(style.card, {
-                  [style.bigCard]: service.title === "IOS & ANDROID APP",
-                })}
-              >
-                <div className={style.icons}>
-                  <img className={style.icon} src={service.icon} alt="icon" />
-                </div>
-                <h3 className={style.cardTitle}>{service.title}</h3>
-                <p className={style.cardDescription}>{service.description}</p>
-              </div>
+              <>
+                {service.title === "IOS & ANDROID APP" ? (
+                  <div key={service.id} className={style.bigCard}>
+                    <div className={style.textContent}>
+                      <h3 className={style.cardTitle}>{service.title}</h3>
+                      <p className={style.cardDescription}>
+                        {service.description}
+                      </p>
+                    </div>
+
+                    <img
+                      className={style.bigIcon}
+                      src={service.icon}
+                      alt="icon"
+                    />
+                  </div>
+                ) : (
+                  <CardInfo
+                    key={service.id}
+                    icon={service.icon}
+                    title={service.title}
+                    description={service.description}
+                  />
+                )}
+              </>
             ))}
           </div>
         </div>
@@ -78,19 +92,12 @@ export function Home() {
               businesses.
             </p>
             <div>
-              {advantagesData.map((advantages, index) => (
-                <div key={index} className={style.advantagesInfo}>
-                  <div className={style.advantagesIcons}>
-                    <img
-                      className={style.advantagesIcon}
-                      src={advantages.icon}
-                      alt="icon"
-                    />
-                  </div>
-                  <h3 className={style.advantagesInfoText}>
-                    {advantages.title}
-                  </h3>
-                </div>
+              {advantagesData.map((advantages) => (
+                <InfoIcon
+                  key={advantages.id}
+                  title={advantages.title}
+                  icon={advantages.icon}
+                />
               ))}
             </div>
           </div>
@@ -111,17 +118,12 @@ export function Home() {
                 success and innovation.
               </p>
               <div>
-                {chooseUsData.map((choose, index) => (
-                  <div key={index} className={style.chooseUsInfo}>
-                    <div className={style.icons}>
-                      <img
-                        className={style.icon}
-                        src={choose.icon}
-                        alt="icon"
-                      />
-                    </div>
-                    <h3 className={style.chooseUsInfoTitle}>{choose.title}</h3>
-                  </div>
+                {chooseUsData.map((choose) => (
+                  <InfoIcon
+                    key={choose.id}
+                    title={choose.title}
+                    icon={choose.icon}
+                  />
                 ))}
               </div>
             </div>
@@ -167,13 +169,8 @@ export function Home() {
             nulla suspendisse tortor aene.
           </p>
           <div className={style.startsInfo}>
-            {startWithData.map((start, index) => (
-              <div key={index} className={style.startInfo}>
-                <div className={style.icons}>
-                  <img className={style.icon} src={start.icon} alt="icon" />
-                </div>
-                <h3 className={style.startInfoTitle}>{start.title}</h3>
-              </div>
+            {startWithData.map((start) => (
+              <InfoIcon key={start.id} title={start.title} icon={start.icon} />
             ))}
           </div>
         </div>

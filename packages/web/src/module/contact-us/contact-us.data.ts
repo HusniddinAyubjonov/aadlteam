@@ -1,19 +1,22 @@
-import img from "../../assets/icon/email-icon.svg";
+import img from "../../assets/icon/email-icon.svg"
 
 export const contactData = [
   {
+    id: 1,
     img: img,
     email: "contact@example.com",
   },
   {
+    id: 2,
     img: img,
     email: "support@example.com",
   },
   {
+    id: 3,
     img: img,
     email: "press@example.com",
   },
-];
+]
 
 export const faqData = [
   {
@@ -41,4 +44,4 @@ export const faqData = [
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id dui pharetra elementum sit id sagittis non donec egestas.",
   },
-];
+]

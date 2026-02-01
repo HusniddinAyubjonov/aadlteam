@@ -1,34 +1,38 @@
-import icon from "../../assets/icon/principles-icon1.svg";
-import icon2 from "../../assets/icon/principles-icon2.svg";
-import icon3 from "../../assets/icon/principles-icon3.svg";
-import icon4 from "../../assets/icon/principles-icon4.svg";
+import icon from "../../assets/icon/principles-icon1.svg"
+import icon2 from "../../assets/icon/principles-icon2.svg"
+import icon3 from "../../assets/icon/principles-icon3.svg"
+import icon4 from "../../assets/icon/principles-icon4.svg"
 
 export const PrincipleList = [
   {
+    id: 1,
     icon: icon,
     title: "Ethics and Responsibility",
     description:
       "We build safe, ethical products, avoiding illegal or adult content, gambling, and trivial projects, focusing on meaningful experiences for users.",
   },
   {
+    id: 2,
     icon: icon2,
     title: "Contract and Respec",
     description:
       "We sign formal contracts before projects and value mutual respect and trust; we reserve the right to end partnerships if our team is disrespected.",
   },
   {
+    id: 3,
     icon: icon3,
     title: "We Hold Client Calls",
     description:
       "We hold calls with clients to clarify project details, align expectations, and ensure desired results, allowing us to respond quickly to changes and build trust.",
   },
   {
+    id: 4,
     icon: icon4,
     title: "Transparency and accountability",
     description:
       "We keep clients informed throughout the project and provide reports at each stage.",
   },
-];
+]
 
 export const missionData = [
   {
@@ -45,7 +49,7 @@ export const missionData = [
     descriptionSecond:
       "From building tools that help doctors consult patients online to platforms that streamline business processes, our journey has always been about combining creativity, technology, and user-focused design. Every project we take on reflects our commitment to quality, innovation, and making a positive impact.",
   },
-];
+]
 
 export const skillsData = [
   {
@@ -96,4 +100,4 @@ export const skillsData = [
     title: "AI",
     items: ["AI engine", "ChatGPT AI engine"],
   },
-];
+]

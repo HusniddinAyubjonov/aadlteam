@@ -2,6 +2,7 @@ import styles from "./about.module.css"
 import { missionData, PrincipleList, skillsData } from "./about-us.data"
 
 import img from "../../assets/imgs/planet.png"
+import { CardInfo } from "../../ui-components/card-info/card-info.component"
 
 export function About() {
   // ---------------------------------------------------------------------------
@@ -30,24 +31,14 @@ export function About() {
           </span>
 
           <div className={styles.principleCards}>
-            {PrincipleList.map((principle, index) => (
-              <div className={styles.principleCard} key={index}>
-                <div className={styles.principleCardIcons}>
-                  <img
-                    className={styles.principleCardIcon}
-                    src={principle.icon}
-                    alt="icon"
-                  />
-                </div>
-                <div className={styles.principleCardText}>
-                  <h2 className={styles.principleCardTitle}>
-                    {principle.title}
-                  </h2>
-                  <p className={styles.principleCardDescription}>
-                    {principle.description}
-                  </p>
-                </div>
-              </div>
+            {PrincipleList.map((principle) => (
+              <CardInfo
+                key={principle.id}
+                icon={principle.icon}
+                title={principle.title}
+                description={principle.description}
+                contentStyle={styles.contentStyle}
+              />
             ))}
           </div>
         </div>
