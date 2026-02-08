@@ -128,6 +128,13 @@
   gap: 1.6rem;
 }
 
+.postCardLink {
+  width: 38rem;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 .postCard {
   overflow: hidden;
   width: 38rem;
@@ -243,6 +250,10 @@
     width: 34rem;
   }
 
+  .postCardLink {
+    width: 34rem;
+  }
+
   .postHeadTitle {
     font-size: 3.6rem;
   }
@@ -285,6 +296,10 @@
   }
 
   .postCard {
+    width: 32rem;
+  }
+
+  .postCardLink {
     width: 32rem;
   }
 
@@ -339,6 +354,10 @@
   }
 
   .postCard {
+    width: 35.8rem;
+  }
+
+  .postCardLink {
     width: 35.8rem;
   }
 
@@ -402,6 +421,11 @@
   }
 
   .postCard {
+    width: 28rem;
+    margin-top: 2rem;
+  }
+
+  .postCardLink {
     width: 28rem;
     margin-top: 2rem;
   }

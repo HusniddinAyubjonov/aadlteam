@@ -105,20 +105,6 @@ export const reviewData = [
     fullName: "John carter",
     role: "Role, Company",
   },
-  {
-    feedback:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    avatar: avatar,
-    fullName: "John carter",
-    role: "Role, Company",
-  },
-  {
-    feedback:
-      "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor fermentum dignissim et pellentesque egestas mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”",
-    avatar: avatar,
-    fullName: "John carter",
-    role: "Role, Company",
-  },
 ]
 
 export const startWithData = [
@@ -141,6 +127,7 @@ export const startWithData = [
 
 export const newData = [
   {
+    id: 1,
     img: img15,
     btnText: "Products",
     title: "The Basics about IT",
@@ -152,6 +139,7 @@ export const newData = [
   },
 
   {
+    id: 2,
     img: img15,
     btnText: "Products",
     title: "The Basics about IT",
@@ -163,37 +151,7 @@ export const newData = [
   },
 
   {
-    img: img15,
-    btnText: "Products",
-    title: "The Basics about IT",
-    description:
-      "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
-    avatar: avatar2,
-    fullName: "Alex Turner",
-    aboutUser: "August 2, 2021",
-  },
-
-  {
-    img: img15,
-    btnText: "Products",
-    title: "The Basics about IT",
-    description:
-      "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
-    avatar: avatar2,
-    fullName: "Alex Turner",
-    aboutUser: "August 2, 2021",
-  },
-  {
-    img: img15,
-    btnText: "Products",
-    title: "The Basics about IT",
-    description:
-      "Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit. Scelerisque viverra donec diammeo.",
-    avatar: avatar2,
-    fullName: "Alex Turner",
-    aboutUser: "August 2, 2021",
-  },
-  {
+    id: 3,
     img: img15,
     btnText: "Products",
     title: "The Basics about IT",

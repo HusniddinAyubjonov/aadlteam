@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./blog.module.css";
 import { postData } from "./blog.data";
 import { Link } from "react-router-dom";
+import { ArticleCard } from "../../ui-components/article-card/article-card.component";
 
 import img from "../../assets/imgs/news-img.png";
 
@@ -64,33 +65,16 @@ export function BlogPage() {
 
           <div className={styles.postCards}>
             {filteredPosts.map((info, index) => (
-              <Link key={index} to={info.link}>
-                <div className={styles.postCard}>
-                  <img
-                    className={styles.postCardImg}
-                    src={info.img}
-                    alt="image"
-                  />
-                  <button className={styles.postCardButton}>
-                    {info.btnText}
-                  </button>
-                  <h3 className={styles.postCardTitle}>{info.title}</h3>
-                  <p className={styles.postCardDescription}>
-                    {info.description}
-                  </p>
-                  <hr className={styles.postCardLine} />
-                  <div className={styles.user}>
-                    <img
-                      className={styles.avatarIcon}
-                      src={info.avatar}
-                      alt="avatar"
-                    />
-                    <span className={styles.userInfo}>
-                      <h4 className={styles.userFullName}>{info.full_name}</h4>
-                      <h5 className={styles.aboutUser}>{info.about_user}</h5>
-                    </span>
-                  </div>
-                </div>
+              <Link key={index} to={info.link} className={styles.postCardLink}>
+                <ArticleCard
+                  img={info.img}
+                  btnText={info.btnText}
+                  title={info.title}
+                  description={info.description}
+                  avatar={info.avatar}
+                  fullName={info.full_name}
+                  aboutUser={info.about_user}
+                />
               </Link>
             ))}
           </div>

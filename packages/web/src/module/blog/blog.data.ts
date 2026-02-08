@@ -1,8 +1,9 @@
-import img1 from "../../assets/imgs/news-img.png";
-import avatar from "../../assets/icon/avatar.svg";
+import img1 from "../../assets/imgs/news-img.png"
+import avatar from "../../assets/icon/avatar.svg"
 
 export const postData = [
   {
+    id: 1,
     link: "/Project",
     img: img1,
     btnText: "Products",
@@ -15,6 +16,7 @@ export const postData = [
     about_user: "August 2, 2021",
   },
   {
+    id: 2,
     link: "/Project",
     img: img1,
     btnText: "Apps",
@@ -27,6 +29,7 @@ export const postData = [
     about_user: "August 5, 2021",
   },
   {
+    id: 3,
     link: "/Project",
     img: img1,
     btnText: "Tutorial",
@@ -39,6 +42,7 @@ export const postData = [
     about_user: "August 10, 2021",
   },
   {
+    id: 4,
     link: "/Project",
     img: img1,
     btnText: "Products",
@@ -51,6 +55,7 @@ export const postData = [
     about_user: "August 15, 2021",
   },
   {
+    id: 5,
     link: "/Project",
     img: img1,
     btnText: "Apps",
@@ -63,6 +68,7 @@ export const postData = [
     about_user: "August 20, 2021",
   },
   {
+    id: 6,
     link: "/Project",
     img: img1,
     btnText: "Tutorial",
@@ -74,4 +80,4 @@ export const postData = [
     full_name: "Alex Turner",
     about_user: "August 25, 2021",
   },
-];
+]

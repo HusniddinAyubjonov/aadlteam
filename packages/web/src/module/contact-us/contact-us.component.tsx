@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { contactData, faqData } from "./contact-us.data"
 import styles from "./contact-us.module.css"
-import { InfoIcon } from "../../ui-components/info-icon/info-icon.component"
+import { CardInfo } from "../../ui-components/card-info/card-info.component"
 
 export function ContactUsPage() {
   const [open, setOpen] = useState<number | null>(null)
@@ -54,11 +54,11 @@ export function ContactUsPage() {
 
             <div className={styles.emails}>
               {contactData.map((item) => (
-                <InfoIcon
+                <CardInfo
+                  type="row"
                   key={item.id}
-                  title={item.email}
                   icon={item.img}
-                  className={styles.icons}
+                  title={item.email}
                 />
               ))}
             </div>

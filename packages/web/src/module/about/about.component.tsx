@@ -33,6 +33,7 @@ export function About() {
           <div className={styles.principleCards}>
             {PrincipleList.map((principle) => (
               <CardInfo
+                type="colum"
                 key={principle.id}
                 icon={principle.icon}
                 title={principle.title}
