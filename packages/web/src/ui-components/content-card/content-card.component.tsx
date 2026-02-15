@@ -1,6 +1,6 @@
-import styles from "./article-card.module.css"
+import styles from "./content-card.module.css"
 
-export function ArticleCard(args: {
+export function ContentCard(args: {
   img: string
   btnText: string
   title: string
@@ -12,7 +12,7 @@ export function ArticleCard(args: {
   return (
     <div className={styles.newCard}>
       <div className={styles.media}>
-        <img className={styles.newCardImg} src={args.img} alt="" />
+        <img className={styles.newCardImg} src={args.img} alt="img" />
         <button className={styles.newCardBtn}>{args.btnText}</button>
       </div>
 

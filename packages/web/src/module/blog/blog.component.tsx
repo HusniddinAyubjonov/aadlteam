@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./blog.module.css";
 import { postData } from "./blog.data";
 import { Link } from "react-router-dom";
-import { ArticleCard } from "../../ui-components/article-card/article-card.component";
+import { ContentCard } from "../../ui-components/content-card/content-card.component";
 
 import img from "../../assets/imgs/news-img.png";
 
@@ -66,7 +66,7 @@ export function BlogPage() {
           <div className={styles.postCards}>
             {filteredPosts.map((info, index) => (
               <Link key={index} to={info.link} className={styles.postCardLink}>
-                <ArticleCard
+                <ContentCard
                   img={info.img}
                   btnText={info.btnText}
                   title={info.title}

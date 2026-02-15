@@ -13,7 +13,7 @@ import img3 from "../../assets/imgs/build-feauture.png"
 import img4 from "../../assets/imgs/video.png"
 import { ReviewSection } from "./section-review/section-review.component"
 import { CardInfo } from "../../ui-components/card-info/card-info.component"
-import { ArticleCard } from "../../ui-components/article-card/article-card.component"
+import { ContentCard } from "../../ui-components/content-card/content-card.component"
 
 export function Home() {
   // ---------------------------------------------------------------------------
@@ -189,7 +189,7 @@ export function Home() {
         <h1 className={styles.newsTitle}>Browse our latest news</h1>
         <div className={styles.newsList}>
           {newData.map((news) => (
-            <ArticleCard
+            <ContentCard
               key={news.id}
               img={news.img}
               btnText={news.btnText}
